@@ -37,8 +37,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :items dependent::destroy
-- belongs_to :destination dependent::destroy
-- belongs_to :credit_card dependent::destroy
+- has_one :destination dependent::destroy
+- has_one :credit_card dependent::destroy
 
 ## destinationテーブル
 |Column|Type|Options|
@@ -84,7 +84,7 @@ Things you may want to cover:
 |user_id|reference|null:false , foreign_key:true)
 
 ### Association
-- belongs_to :user dependent: :destroy
+- belongs_to :user
 - belongs_to :category dependent: :destroy
 - has_many :images dependent: :destroy
 
