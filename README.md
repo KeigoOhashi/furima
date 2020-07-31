@@ -82,6 +82,7 @@ Things you may want to cover:
 |shipping_area|string|null: false|
 |shipping_days|integer|null: false|
 |user_id|reference|null:false , foreign_key:true)
+|category_id|reference|null:false , foreign_key:true)
 
 ### Association
 - belongs_to :user
@@ -101,7 +102,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |image_url|string|null: false|
-|items_id|referense|null:false , foreign_key:true)|
+|item_id|referense|null:false , foreign_key:true)|
 
 ### Association
-- belongs_to :items 
+- belongs_to :items
