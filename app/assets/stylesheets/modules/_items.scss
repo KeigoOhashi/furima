@@ -478,10 +478,10 @@ a {
           .details{
             font-size: 16px;
           
-            p{
-              font-size: 10px;
-              text-align: left;}
-             }
+            //p{
+            //  font-size: 10px;
+            //  text-align: left;}
+            // }
            }
          }  
        }
@@ -516,28 +516,29 @@ a {
 
 
       
-    .app__banner{
-      padding: 100px 40px;
+    .foto{
+      //padding: 20px 40px;
       position: relative;
       display: flex;
       align-items: center;
       background-size: cover;
-      //background-position: center;
-      .inner{
+      background-position: center;
+      .foto__box{
           position: absolute;
-          text-align: center;
+          margin:auto ;
+         text-align: center;
           
           color: #fff;
           
-        .inner__title{
+        .foto__title{
           text-shadow: 0 0 5px rgba(0,0,0,0.4);
           font-size: 24px;
           font-weight: bold;
           line-height: 1.4;
-        .inner__text{
+        .foto__text{
           font-size: 35px;
           text-shadow: 0 0 5px rgba(0,0,0,0.4);
-        .inner__icon{
+        .foto__icon{
           width: 100%;
           display: flex;
           //justify-content: center;
@@ -546,18 +547,18 @@ a {
       }
     }
    }
-
+  }
    
 
 
 
   .footer{
-    li{
-      padding-top: 15px;
-      }
-    a{
-      color: #fff;
-     }
+    //li{
+    //  padding-top: 15px;
+    //  }
+    //a{
+    //  color: #fff;
+    // }
     height: 400px;
     width: 100%;
     padding: 10px 60px 10px;
@@ -570,28 +571,28 @@ a {
         width:1020px;
       
       .content__left{
-        display: flex;
-        flex-direction: column;
-        width: calc(1 / 3 * 100%);
-        margin: 0 2% 0 0;
-      
-      .content__left__head{
-        margin: 0 0 20px;
-        font-size: 16px;
-        font-weight: bold;}
-      .content__center{
-        display: flex;
         flex-direction: column;
         width: calc(1 / 3 * 100%);
         margin: 0 2% 0 0;
         
-      .content__center__head{
+      .content__left__head{
+        margin: 0 0 20px;
+        font-size: 16px;
+        font-weight: bold;}
+        
+      .content__center{
+        
+        flex-direction: column;
+        width: calc(1 / 3 * 100%);
+        margin: 0 2% 0 0;
+        
+      .content__centerdisplay{
         margin: 0 0 20px;
         font-size: 16px;
         font-weight: bold;
       
       .content__right{
-        display: flex;
+        
         flex-direction: column;
         width: calc(1 / 3 * 100%);
         margin: 0 2% 0 0;
@@ -605,7 +606,7 @@ a {
   }
 }
 }
-}
+}}}}
 
       .footer__logo{
         padding: 60px 0;
@@ -614,7 +615,7 @@ a {
         text-align: center;
       }
       
-  }
+  
   .purchase__btn{ 
     width: 120px;
     background: #3CCACE;
@@ -638,6 +639,4 @@ a {
     width: 60%;
   }
 }
-}
-
-  }}
+} 
