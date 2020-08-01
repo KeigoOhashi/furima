@@ -28,16 +28,19 @@ body {
   height:128px;
   width: 768px;
   margin: 0 auto;
+  text-align: center;
   &__logo{
-    width: 185px;
-    padding: 40px 0 0 0;
+    width: 100px;
+    padding: 40px 0 0 0px;
     float: left;
+    height: 100%;
     &--center{
       width: 185px;
       padding: 40px 0 0 0;
       margin: 0 auto;
     }
     &a, img{
+      width: 185px;
       height: 49px;
       line-height: 49px;
     }
@@ -45,7 +48,7 @@ body {
 
 /* ヘッダーナビ */
   &__progress{
-    padding: 40px 0 0 4px;
+    padding: 40px 0 0 160px;
     width: 583px;
     box-sizing: border-box;
     float: left;
@@ -185,9 +188,9 @@ body {
   height: calc(100% - 378px);
 
   &__container{
-    width: 700px;
+    width: 450px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #f5f5f5;
     &__title{
       box-sizing: border-box;
       text-align: center;
@@ -201,7 +204,7 @@ body {
       padding: 24px 16px 40px;
 
       &__frame{
-        max-width: 343px;
+        max-width: 450px;
         margin: 0 auto;
       }
     }
@@ -617,4 +620,8 @@ input[type=checkbox] {
 .logout-content{
   max-width: 320px;
   margin: 0 auto;
+}
+
+.fab{
+  margin-right: 6px;
 }
