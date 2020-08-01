@@ -1,7 +1,7 @@
 .body
-  .pc__header
-    .header__Inner
-      .main__header
+  .header
+    .header__inner
+      .header__main
         %h1.icon
           = link_to root_path do
             = image_tag  "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:'134',height:'36'
@@ -16,11 +16,11 @@
                   = image_tag "/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg",width:'40',height:'30'
             %input{:name => "authenticity_token", :type => "hidden", :value => "OBHVNGwRNEzn3yc5ciRJpZnfmtUjnE/QO/hj6tnrRnJP89jhpZTfkQgysVVgo2r34ymB0rcGL/jiRedonj8dLA=="}/
         %ul.result__lists
-      .nav
+      .lists
         %ul.lists__left
           %li.lists__left__item.lists__left__item--first
-            %a#catBtn{:href => "#"} カテゴリー
-            .tree.displayNone
+            %a#cat__btn{:href => "#"} カテゴリー
+            .tree.display__none
               %ul.categoryTree
                 %li.categoryTree--item
                   %a#1{:href => "#"} レディース
@@ -48,13 +48,13 @@
                   %a#12{:href => "#"} 自動車・オートバイ
                 %li.categoryTree--item
                   %a#13{:href => "#"} その他
-          %li.li#stsLeft__item
-            %a#brandBtn{:href => "#"} ブランド
-            %ul.brandsPulldown.displayNone
-        %ul.listsRight
-          %li.listsRight__item.listsRight__item--login
+          %li.lists__left__item
+            %a#brand__btn{:href => "#"} ブランド
+            %ul.brands__pulldown.display_none
+        %ul.lists__right
+          %li.lists__right__item.lists__right__item--login
             %a{:href => "#"} ログイン
-          %li.listsRight__item.listsRight__item--new
+          %li.lists__right__item.lists__right__item--new
             %a{:href => "#"} 新規会員登録
   .main
     .main__visual
@@ -254,7 +254,7 @@
                   %ul
                     %li 10000円
                     %li
-                      %i.fa.fa-star.likeIcon
+                      %i"fa fa-star" aria-hidden="true"
                       1
                   %p (税込)
   .foto
@@ -298,7 +298,7 @@
             %a{:href => "#"} お知らせ
     .footer__logo
       %a{:href => "/"}
-        = image_tag "http://furima.tokyo/assets/logo-white-f61961ed5170064c5f33dd4524bdceeb5a5df2c83eb76fba31143f63fbab2c5e.svg",width:'180',height:'53'
+        = image_tag "http://furima.tokyo/assets/logo-white-f61961ed5170064c5f33dd4524bdceeb5a5df2c83eb76fba31143f63fbab2c5e.svg",width:'160',height:'46'
     %p © FURIMA
   %a{:href => "#"}
     .purchase__btn
