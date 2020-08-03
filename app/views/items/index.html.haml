@@ -1,24 +1,24 @@
 .body
   .header
     .header__inner
-      .header__main
-        %h1.icon
+      .header__inner__main
+        %h1.header__inner__main__simbol
           = link_to root_path do
-            = image_tag  "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:'134',height:'36'
+            = image_tag  "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:'140',height:'40'
         .search__box
           %form{"accept-charset" => "UTF-8", :action => "#", :method => "get"}
             %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-            %input#searchInput.searchBox--input{:name => "key", :placeholder => "キーワードから探す"}/
+            %input.search__box__input{:name => "key", :placeholder => "キーワードから探す"}/
           %form.button_to{:action => "/?type=submit", :method => "post"}
             %button{:type => "submit"}
               .search__box__icon
                 = link_to "#" do
-                  = image_tag "/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg",width:'40',height:'30'
+                  = image_tag "http://furima.tokyo/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg",width:'30',height:'30'
             %input{:name => "authenticity_token", :type => "hidden", :value => "OBHVNGwRNEzn3yc5ciRJpZnfmtUjnE/QO/hj6tnrRnJP89jhpZTfkQgysVVgo2r34ymB0rcGL/jiRedonj8dLA=="}/
         %ul.result__lists
       .lists
         %ul.lists__left
-          %li.lists__left__item.lists__left__item--first
+          %li.lists__left__item--first
             %a#cat__btn{:href => "#"} カテゴリー
             .tree.display__none
               %ul.categoryTree
@@ -52,9 +52,9 @@
             %a#brand__btn{:href => "#"} ブランド
             %ul.brands__pulldown.display_none
         %ul.lists__right
-          %li.lists__right__item.lists__right__item--login
+          %li.lists__right__item--login
             %a{:href => "#"} ログイン
-          %li.lists__right__item.lists__right__item--new
+          %li.lists__right__item--new
             %a{:href => "#"} 新規会員登録
   .main
     .main__visual
@@ -83,7 +83,8 @@
             %span.number1 1
             = image_tag"http://furima.tokyo/assets/pict-reason-01-77b860b45f32923029756050dafc0f6df01a36675414b0f26f127c64a53baaea.jpg",width:300,height:'300'
           %h3.pic__list__left__text
-            %span 3分ですぐに出品
+            %span 3分
+            ですぐに出品
           %p.pic__list__left__description
             スマホで入力するだけで簡単に出品できる！
         %li.pic__list__center
@@ -91,7 +92,8 @@
             %span.number2 2
             = image_tag "http://furima.tokyo/assets/pict-reason-02-3471b96ea7b52654510992e57dc05af07926de0836200059b7fa4ead05ee4d56.jpg",width:300,height:'300'
           %h3.pic__list__center__text
-            %span シンプルで使いやすい
+            %span シンプル
+            で使いやすい
           %p.pic__list__center__description
             めんどくさい入力は必要なく、検索も購入もスムーズ！
         %li.pic__list__right
@@ -171,7 +173,8 @@
                   %ul
                     %li 30000円
                     %li
-                      %i.fa.fa-star.likeIcon
+                      %i.fa.fa-star
+                        
                       0
                   %p (税込)
           .product__lists__list
@@ -184,7 +187,7 @@
                   %ul
                     %li 20000円
                     %li
-                      %i.fa.fa-star.likeIcon
+                      %i.fas.fa-star
                       0
                   %p (税込)
           .product__lists__list

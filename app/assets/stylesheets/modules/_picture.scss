@@ -49,10 +49,15 @@
       }
     }
       .pic__list__left__text{
+        text-align: center;
         font-weight: bold;
         font-size: 24px;
         line-height: 50px;
         margin: 0 0 0 2px;
+
+        span{
+          color:#3CCACE;
+         }
        .pic__list__left__description{
          font-size: 18px;
          line-height: 1.5;
@@ -81,10 +86,14 @@
          }
     }
       .pic__list__center__text{
+        text-align: center;
         font-weight: bold;
         font-size: 24px;
         line-height: 50px;
         margin: 0 0 0 2px;
+        span{
+          color:#3CCACE;
+        }
       .pic__list__center__description{
         font-size: 18px;
        margin: 16px 0 0;
@@ -92,7 +101,7 @@
     }  
   }
   .pic__list__right{
-    text-align: left;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     margin: 16px 20% 0 0;
@@ -112,11 +121,17 @@
        }
       }
      .pic__list__right__text{
+      text-align: center;
       font-weight: bold;
       font-size: 24px;
       line-height: 50px;
       margin: 0 0 0 2px;
+
+       span{
+         color:#3CCACE;
+        }
      .pic__list__right__description{
+      
       font-size: 18px;
       margin: 16px 0 0;
       }

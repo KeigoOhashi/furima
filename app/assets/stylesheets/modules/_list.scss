@@ -3,74 +3,62 @@
   display: flex;
   margin-bottom: 10px;
   text-decoration : none;
+  justify-content : space-between;
 
   .lists__left{
     position: relative;
     display: flex;
-    
-  .lists__left__item.lists__left__item--first{
-    text-decoration: none;
-    padding: 0;
-    list-style: none;
-    font-size: 14px;
-  //.cat__btn{
-
-  .tree.display__none{
-    z-index: 2;
-    position: absolute;
-    background-color: #fff;
-    width: 240px;
-    top: 40px;
-  //.categoryTree{
-  //  background-color: #fff;
-  //  display: flex;
-  //  flex-direction: column;
-  //  position: relative;
-  //
-//
-//
-  //.categoryTree--item{
-  //  position: relative;
   
-  .lists__left__item{
-    color: #333;
-    text-decoration: none;
-    line-height: 32px;
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: 18px;
-    padding-left: 30px;
-    .brand__btn{
+     .lists__left__item--first{
+       text-decoration: none;
+       padding: 0;
+       list-style: none;
+       font-size: 14px;
+     
+       .tree.display__none{
+         z-index: 2;
+         position: absolute;
+         background-color: #fff;
+         width: 240px;
+         top: 40px;
+        }
+       }
 
+      .lists__left__item{
+        color: #333;
+        text-decoration: none;
+        line-height: 32px;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: 18px;
+        padding-left: 30px;
+        
+       .brands__pulldown.display_none{
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+        text-decoration : none;
+       }
+      }
     }
-  
-  }
-}
-.brands__pulldown.display_none{
-    position: absolute;
-    z-index: 1;
-    background-color: #fff;
-    text-decoration : none;
-    
-  
   .lists__right{
     margin-left: auto;
     display: flex;
-    
-    .lists__right__item.lists__right__item--login{
+    .lists__right__item--login{
       display: flex;
       align-items: center;
-      color: #333;
+      color:black;
       text-decoration: none;
       line-height: 32px;
       margin-right: 20px;
-    
-    .lists__right__item.lists__right__item--new{
+    }
+    .lists__right__item--new{
       display: flex;
       align-items: center;
-      color: #333;
+      color:black;
       text-decoration: none;
       line-height: 32px;
+     }
     }
   }
-  }}}}}
+  
