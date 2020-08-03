@@ -1,4 +1,4 @@
-.top__middle__dl{
+.middle__dl{
   position: relative;
   background-position: bottom right;
   height: 400px;
@@ -6,38 +6,38 @@
   background-size: cover;
   display: flex;
   align-items: center;
-    .top__middle__dl__inner{
+
+    .middle__dl__inner{
       position: absolute;
       color: #fff;
       text-shadow: 0 0 8px rgba(0,0,0,0.4);
       text-align: left;
       left:200px;
-    .top__middle__dl__subtitle{
+
+    .middle__dl__subtitle{
       font-size: 27px;
       font-weight: bold;
-      line-height:  1.4;
-
-      top__middle__dl__text{
-          font-size: 18px;
-          line-height: 1.5;  
-        }
-       }
-      }
+      line-height:  1.5;
+      margin-bottom: 15px;
+    }
+    .middle__dl__text{
+        font-size: 18px;
+        line-height: 1.5;  
+    }
+     }
+      
      .btn{
       display: flex;
       margin-top: 30px;
-       a{
+      a{
         margin-right: 15px;
         opacity: 1;
-         //transition:all 1s;
-        }
         a:hover{
          opacity:0.5;
         }
        }
-      
-      
-    }
+     } 
+}
    
   
 

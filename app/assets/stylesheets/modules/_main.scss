@@ -1,42 +1,41 @@
-.main{
-  .main__visual{
+
+  .main{
     position: relative;
     background-size: cover;
     background-position: center center;
   
   
-  .main__visual__content{
-    position: absolute;
-    left:180px;
-    top:100px;
-  
-    .main__visual__content--subtitle{
-      text-shadow: 0 0 5px rgba(0,0,0,0.4);
-      font-size: 60px;
-      line-height: 1.5;
-      color: #fff;
-    }
-      .main__visual__content--text{
-       //position: absolute;
-       text-shadow: 0 0 5px rgba(0,0,0,0.4);
-       font-size: 18px;
-       color: #fff;
-       line-height: 1.9;
-       margin: 15px 0 20px 0;
+    .main__content{
+      position: absolute;
+      left:180px;
+      top:100px;
+    
+      .main__content--subtitle{
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 60px;
+        line-height: 1.5;
+        color: #fff;
       }
     }
-  }}
-
-     .main__visual__content--btn{
-        display: flex;
-        a{
-          margin-right: 15px;
-          opacity: 1;
-         }
-          a:hover{
-            opacity:0.5;
-           }
-         }
-        
+      .main__content--text{
+         //position: absolute;
+         text-shadow: 0 0 5px rgba(0,0,0,0.4);
+         font-size: 18px;
+         color: #fff;
+         line-height: 1.9;
+         margin: 15px 0 20px 0;
+        }
+    
+      .main__content--btn{
+         display: flex;
+         a{
+           margin-right: 15px;
+           opacity: 1;
+          }
+           a:hover{
+             opacity:0.5;
+            }
+      }
+ }    
       
   

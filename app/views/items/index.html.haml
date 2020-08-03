@@ -18,7 +18,7 @@
         %ul.result__lists
       .lists
         %ul.lists__left
-          %li.lists__left__item--first
+          %li.lists__left__item--category
             %a#cat__btn{:href => "#"} カテゴリー
             .tree.display__none
               %ul.categoryTree
@@ -48,7 +48,7 @@
                   %a#12{:href => "#"} 自動車・オートバイ
                 %li.categoryTree--item
                   %a#13{:href => "#"} その他
-          %li.lists__left__item
+          %li.lists__left__item--bland
             %a#brand__btn{:href => "#"} ブランド
             %ul.brands__pulldown.display_none
         %ul.lists__right
@@ -56,60 +56,60 @@
             %a{:href => "#"} ログイン
           %li.lists__right__item--new
             %a{:href => "#"} 新規会員登録
+  
   .main
-    .main__visual
-      = image_tag "http://furima.tokyo/assets/bg-mainVisual-pict_pc-a1a4be0d864c29338b03d163957f9fd26b20f7c1fa0d05c17b603ec54d249ebe.jpg",width:'100%',height:'540'
-      %section.main__visual__content
-        %h2.main__visual__content--subtitle
-          %br/
-          人生を変えるフリマアプリ
-        %p.main__visual__content--text
-          FURIMAはだれでもかんたんに出品・購入できる
-          %br/
-          フリマアプリです
-        .main__visual__content--btn
-          = link_to "#" do
-            = image_tag"http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg",width:'180',height:'53'
-          = link_to "#" do
-            = image_tag"http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg",width:'180',height:'53'
+    = image_tag "http://furima.tokyo/assets/bg-mainVisual-pict_pc-a1a4be0d864c29338b03d163957f9fd26b20f7c1fa0d05c17b603ec54d249ebe.jpg",width:'100%',height:'540'
+    %section.main__content
+      %h2.main__content--subtitle
+        %br/
+        人生を変えるフリマアプリ
+      %p.main__content--text
+        FURIMAはだれでもかんたんに出品・購入できる
+        %br/
+        フリマアプリです
+      .main__content--btn
+        = link_to "#" do
+          = image_tag"http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg",width:'180',height:'53'
+        = link_to "#" do
+          = image_tag"http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg",width:'180',height:'53'
   .picture
-    .top__introduction
-      .top__introduction--subtitle
+    .top__intro
+      .top__intro--subtitle
         FURIMAが選ばれる3つの理由
         .subtitle__after 
       %ul.pic__lists
-        %li.pic__list__left
-          .pic__list__left__pict
+        %li.pic__lists__left
+          .pic__lists__left__pict
             %span.number1 1
             = image_tag"http://furima.tokyo/assets/pict-reason-01-77b860b45f32923029756050dafc0f6df01a36675414b0f26f127c64a53baaea.jpg",width:300,height:'300'
-          %h3.pic__list__left__text
+          %h3.pic__lists__left__text
             %span 3分
             ですぐに出品
-          %p.pic__list__left__description
+          %p.pic__lists__left__description
             スマホで入力するだけで簡単に出品できる！
-        %li.pic__list__center
-          .pic__list__center__pict
+        %li.pic__lists__center
+          .pic__lists__center__pict
             %span.number2 2
             = image_tag "http://furima.tokyo/assets/pict-reason-02-3471b96ea7b52654510992e57dc05af07926de0836200059b7fa4ead05ee4d56.jpg",width:300,height:'300'
-          %h3.pic__list__center__text
+          %h3.pic__lists__center__text
             %span シンプル
             で使いやすい
-          %p.pic__list__center__description
+          %p.pic__lists__center__description
             めんどくさい入力は必要なく、検索も購入もスムーズ！
-        %li.pic__list__right
-          .pic__list__right__pict
+        %li.pic__lists__right
+          .pic__lists__right__pict
             %span.number3 3
             = image_tag "http://furima.tokyo/assets/pict-reason-03-1e3c743f3ba3db8c43987d2e257916a615aa8fc59c02bbc116f041a5580ec28f.jpg",width:300,height:'300'
-          %h3.pic__list__right__text
+          %h3.pic__lists__right__text
             手数料
             %span 業界最安
-          %p.pic__list__right__description
+          %p.pic__lists__right__description
             最大3%でお得に出品&amp;購入！
-    %section.top__middle__dl
+    %section.middle__dl
       = image_tag  "http://furima.tokyo/assets/bg-topMiddleDl-pict-5042a3aa7eef6dd93330080028e3a781daf47c390c00a4fb5d7e7b06caae68c9.jpg",width:'100%',height:'400'
-      .top__middle__dl__inner
-        %h2.top__middle__dl__subtitle 会員数日本一位
-        %p.top__middle__dl__text
+      .middle__dl__inner
+        %h2.middle__dl__subtitle 会員数日本一位
+        %p.middle__dl__text
           FURIMAは、フリマアプリで最も人気。
           %br/
           出品・購入回数も業界最多です！
@@ -120,26 +120,26 @@
             = image_tag"http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg",width:'180',height:'53'
           %a{:href => "#"}
             = image_tag "http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg",width:'180',height:'53'
-    %section.top__key__features
+    %section.features
       %h2.head 
         FURIMAの特徴
         .head__after
       .items
         %section.items__item
           %figure.items__item--img
-            = image_tag "http://furima.tokyo/assets/icon-01-7f6abf70ea7deaed9ab5d8b6d5cb796250e3e292b9ecdc559ebe6492c31fdab8.svg",width:'200',height:'340'
+            = image_tag "http://furima.tokyo/assets/icon-01-7f6abf70ea7deaed9ab5d8b6d5cb796250e3e292b9ecdc559ebe6492c31fdab8.svg",width:'220',height:'340'
           %h3.items__item--subtitle 簡単に売り買いできる
           %p.items__item--detail
             スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
         %section.items__item
           %figure.items__item--img
-            = image_tag "http://furima.tokyo/assets/icon-03-9c0d78266a316fec7b738dcf5c68dd987afb9655b13fd2cd5d30bcf09e827694.svg",width:'200',height:'340'
+            = image_tag "http://furima.tokyo/assets/icon-03-9c0d78266a316fec7b738dcf5c68dd987afb9655b13fd2cd5d30bcf09e827694.svg",width:'220',height:'340'
           %h3.items__item--subtitle 売上金は即日振込みに対応
           %p.items__item--detail
             午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
         %section.items__item
           %figure.items__item--img
-            = image_tag "http://furima.tokyo/assets/icon-04-c4052f85cd6e1f62ea8cac8c55277d7fa4bda971d924f8a2afe72eea6558fa85.svg",width:'200',height:'340'
+            = image_tag "http://furima.tokyo/assets/icon-04-c4052f85cd6e1f62ea8cac8c55277d7fa4bda971d924f8a2afe72eea6558fa85.svg",width:'220',height:'340'
           %h3.items__item--subtitle 様々な支払いに対応
           %p.items__item--detail
             お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
@@ -173,8 +173,7 @@
                   %ul
                     %li 30000円
                     %li
-                      %i.fa.fa-star
-                        
+                      %i.fa.fa-star  
                       0
                   %p (税込)
           .product__lists__list
@@ -265,9 +264,9 @@
   .foto
     = image_tag "http://furima.tokyo/assets/bg-appBanner-pict-ce684a4c4d5fa2da43c30a3839923591af75a642a3a906ad975065771ef3d72f.jpg",width:'100%',height:'400'
     .foto__box
-      .foto__title だれでもかんたん、人生を変えるフリマアプリ
-      .foto__text 今すぐ無料ダウンロード！
-      .foto__icon
+      .foto__box--title だれでもかんたん、人生を変えるフリマアプリ
+      .foto__box--text 今すぐ無料ダウンロード！
+      .foto__box--icon
         %a{:href => "#"}
           = image_tag "http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg",width:'180',height:'53'
         %a{:href => "#"}

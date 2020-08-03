@@ -1,5 +1,4 @@
 .foto{
-  //padding: 20px 40px;
   position: relative;
   display: flex;
   align-items: center;
@@ -7,33 +6,31 @@
   background-position: center;
   .foto__box{
       position: absolute;
-      
       text-align: center;
       color: #fff;
       margin-left: 500px;
-      
-      
-    .foto__title{
+       
+    .foto__box--title{
       color: #fff;
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       font-size: 24px;
       font-weight: bold;
       line-height: 1.4;
     }
-    .foto__text{
+    .foto__box--text{
       font-size: 35px;
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       line-height: 2.0;
     }
-  }}
-    .foto__icon{
+  }
+}
+    .foto__box--icon{
       width: 100%;
       display: flex;
       display: block;
        a{
         margin-right: 15px;
         opacity: 1;
-         //transition:all 1s;
         }
        a:hover{
          opacity:0.5;

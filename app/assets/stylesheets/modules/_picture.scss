@@ -1,10 +1,10 @@
 .picture{
   top: 0;
-  right: 210px;
+  //right: 210px;
   
-.top__introduction{
+.top__intro{
     padding: 60px 20px;
-  .top__introduction--subtitle{
+  .top__intro--subtitle{
     text-align: center;
     font-size: 26px;
     line-height: 1.4;
@@ -14,24 +14,24 @@
     position: relative;
   }
 }
-  .subtitle__after {
-    width: 70px;
-    height: 4px;
-    background-color: #3CCACE;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    .subtitle__after {
+      width: 70px;
+      height: 4px;
+      background-color: #3CCACE;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   .pic__lists{
     display: flex;
     
-    .pic__list__left{
+    .pic__lists__left{
       text-align: left;
       flex-direction: column;
       align-items: center; 
       margin: 16px 5% 0 10%;   
-    .pic__list__left__pict{
+    .pic__lists__left__pict{
       position: relative;
       margin-bottom: 20px;
     
@@ -48,7 +48,7 @@
         color: #fff;
       }
     }
-      .pic__list__left__text{
+      .pic__lists__left__text{
         text-align: center;
         font-weight: bold;
         font-size: 24px;
@@ -58,18 +58,18 @@
         span{
           color:#3CCACE;
          }
-       .pic__list__left__description{
+       .pic__lists__left__description{
          font-size: 18px;
          line-height: 1.5;
          margin: 16px 0 0;
     } }
   }
-  .pic__list__center{
+  .pic__lists__center{
       text-align: left;
       flex-direction: column;
       align-items: center;
       margin: 16px 5% 0 0;
-    .pic__list__center__pict{
+    .pic__lists__center__pict{
       position: relative;
       margin-bottom: 20px;
        .number2{
@@ -85,7 +85,7 @@
          color: #fff;
          }
     }
-      .pic__list__center__text{
+      .pic__lists__center__text{
         text-align: center;
         font-weight: bold;
         font-size: 24px;
@@ -94,18 +94,18 @@
         span{
           color:#3CCACE;
         }
-      .pic__list__center__description{
+      .pic__lists__center__description{
         font-size: 18px;
        margin: 16px 0 0;
       }
     }  
   }
-  .pic__list__right{
+  .pic__lists__right{
     text-align: center;
     flex-direction: column;
     align-items: center;
     margin: 16px 20% 0 0;
-    .pic__list__right__pict{
+    .pic__lists__right__pict{
       position: relative;
       margin-bottom: 20px;
       .number3{
@@ -120,7 +120,7 @@
         font-size: 30px;
        }
       }
-     .pic__list__right__text{
+     .pic__lists__right__text{
       text-align: center;
       font-weight: bold;
       font-size: 24px;
@@ -130,7 +130,7 @@
        span{
          color:#3CCACE;
         }
-     .pic__list__right__description{
+     .pic__lists__right__description{
       
       font-size: 18px;
       margin: 16px 0 0;
