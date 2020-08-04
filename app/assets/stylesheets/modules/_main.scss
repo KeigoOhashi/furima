@@ -5,12 +5,12 @@
     background-position: center center;
   
   
-    .main__content{
+    &__content{
       position: absolute;
       left:180px;
       top:100px;
     
-      .main__content--subtitle{
+      &--subtitle{
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
         font-size: 60px;
         line-height: 1.5;

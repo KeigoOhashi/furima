@@ -20,20 +20,20 @@
       display: flex;
       width:100%;
     
-    .content__left{
+    &__left{
       flex-direction: column;
       width: calc(1 / 3 * 100%);
-       .content__left__head{
+       &__left__head{
          margin-bottom: 20px;
          font-size: 16px;
          font-weight: bold;
          
        }
     }
-      .content__center{
+      &__center{
         flex-direction: column;
         width: calc(1 / 3 * 100%);  
-        .content__center__head{
+        &__center__head{
           margin-bottom: 20px;
           font-size: 16px;
           font-weight: bold;
@@ -41,10 +41,10 @@
         }
       }
 
-    .content__right{
+    &__right{
       flex-direction: column;
       width: calc(1 / 3 * 100%);
-      .content__right__head{
+      &__head{
         margin-bottom: 20px;
         font-weight: bold;
         

@@ -4,7 +4,7 @@
   
 .top__intro{
     padding: 60px 20px;
-  .top__intro--subtitle{
+  &--subtitle{
     text-align: center;
     font-size: 26px;
     line-height: 1.4;
@@ -26,12 +26,12 @@
   .pic__lists{
     display: flex;
     
-    .pic__lists__left{
+    &__left{
       text-align: left;
       flex-direction: column;
       align-items: center; 
       margin: 16px 5% 0 10%;   
-    .pic__lists__left__pict{
+    &__pict{
       position: relative;
       margin-bottom: 20px;
     
@@ -48,7 +48,7 @@
         color: #fff;
       }
     }
-      .pic__lists__left__text{
+      &__text{
         text-align: center;
         font-weight: bold;
         font-size: 24px;
@@ -58,7 +58,7 @@
         span{
           color:#3CCACE;
          }
-       .pic__lists__left__description{
+       &__description{
          font-size: 18px;
          line-height: 1.5;
          margin: 16px 0 0;
@@ -69,7 +69,7 @@
       flex-direction: column;
       align-items: center;
       margin: 16px 5% 0 0;
-    .pic__lists__center__pict{
+    &__pict{
       position: relative;
       margin-bottom: 20px;
        .number2{
@@ -85,7 +85,7 @@
          color: #fff;
          }
     }
-      .pic__lists__center__text{
+      &__text{
         text-align: center;
         font-weight: bold;
         font-size: 24px;
@@ -94,7 +94,7 @@
         span{
           color:#3CCACE;
         }
-      .pic__lists__center__description{
+      &__description{
         font-size: 18px;
        margin: 16px 0 0;
       }
@@ -105,7 +105,7 @@
     flex-direction: column;
     align-items: center;
     margin: 16px 20% 0 0;
-    .pic__lists__right__pict{
+    &__pict{
       position: relative;
       margin-bottom: 20px;
       .number3{
@@ -120,7 +120,7 @@
         font-size: 30px;
        }
       }
-     .pic__lists__right__text{
+     &__text{
       text-align: center;
       font-weight: bold;
       font-size: 24px;
@@ -130,7 +130,7 @@
        span{
          color:#3CCACE;
         }
-     .pic__lists__right__description{
+     &__description{
       
       font-size: 18px;
       margin: 16px 0 0;

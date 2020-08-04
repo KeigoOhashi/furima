@@ -38,7 +38,7 @@
             margin-top: 30px;
         
       
-           .product__lists__list{
+           &__list{
               width: 220px;
               margin-bottom: 10px;
               display: inline-block;
@@ -52,11 +52,11 @@
               }
            
        
-            .product__lists__list--img{
+            &--img{
                height: 150px;
                margin-left: 0px;  
               }
-            .product__lists__list--body{
+            &--body{
                text-align: left;
                background-color: white;
                color:black;

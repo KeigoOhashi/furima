@@ -11,24 +11,25 @@
     
       .lists__left__item--category{
         padding: 0;
-        //display:none;
         list-style: none;
         line-height: 32px;
         background-position: center right;
         background-repeat: no-repeat;
         background-size: 18px;
         padding-right: 30px;
-        a{
+       
+         a{
           color: #333;
           font-size: 12px;
           &:hover{
             color:orange;
-           }
+          }
          }
-       }
-   }  
-       .tree.display__none{
-         z-index: 2;
+      }  
+    }
+       .tree__display{
+         z-index: 10;
+         display: none;
          position: absolute;
          background-color: #fff;
          width: 240px;

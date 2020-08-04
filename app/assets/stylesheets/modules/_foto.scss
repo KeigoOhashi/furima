@@ -4,20 +4,20 @@
   align-items: center;
   background-size: cover;
   background-position: center;
-  .foto__box{
+  &__box{
       position: absolute;
       text-align: center;
       color: #fff;
       margin-left: 500px;
        
-    .foto__box--title{
+    &--title{
       color: #fff;
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       font-size: 24px;
       font-weight: bold;
       line-height: 1.4;
     }
-    .foto__box--text{
+    &--text{
       font-size: 35px;
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       line-height: 2.0;
