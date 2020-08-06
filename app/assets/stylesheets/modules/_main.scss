@@ -1,0 +1,41 @@
+
+  .main{
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+  
+  
+    &__content{
+      position: absolute;
+      left:180px;
+      top:100px;
+    
+      &--subtitle{
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 60px;
+        line-height: 1.5;
+        color: #fff;
+      }
+    }
+      .main__content--text{
+         //position: absolute;
+         text-shadow: 0 0 5px rgba(0,0,0,0.4);
+         font-size: 18px;
+         color: #fff;
+         line-height: 1.9;
+         margin: 15px 0 20px 0;
+        }
+    
+      .main__content--btn{
+         display: flex;
+         a{
+           margin-right: 15px;
+           opacity: 1;
+          }
+           &:hover{
+             opacity:0.5;
+            }
+      }
+ }    
+      
+  

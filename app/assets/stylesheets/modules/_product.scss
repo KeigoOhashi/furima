@@ -1,0 +1,102 @@
+
+      .pickup__container{
+        padding: 60px 0 0;
+        background-color: #f8f8f8;
+        height: 100%;
+                
+        .head{
+          text-align: center;
+          font-size: 28px;
+          line-height: 1.4;
+          font-weight: bold;
+        }
+        .product__box{
+          margin: 0,auto;
+          padding: 0;
+          
+        }
+          .product__head{
+            position: relative;
+          }
+          .title{
+            text-align: center;
+            font-size: 24px;
+            color:#3CCACE;
+            font-weight: bold;
+            
+          }
+          a{
+            text-decoration: none;
+           }
+        }
+         .product__lists{
+            width: 1000px; 
+            height: 350px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        
+      
+           &__list{
+              width: 220px;
+              margin-bottom: 10px;
+              display: inline-block;
+    
+              &{
+                opacity: 1;
+                
+               &:hover{
+                opacity:0.5;
+                 }
+              }
+           
+       
+            &--img{
+               height: 150px;
+               margin-left: 0px;  
+              }
+            &--body{
+               text-align: left;
+               background-color: white;
+               color:black;
+               padding:16px;
+               display: block;
+               height: 60px;
+             
+               .name{  
+                 line-height: 1.6;
+                 font-size: 16px;
+               }
+               .details{
+                 font-size: 14px;
+                 color:black;
+                 ul{
+                   display: flex;
+                   align-items: center;
+                   justify-content: space-between;
+                   li{
+                     i{
+                       margin-right: 2px;
+                     }
+                   } 
+                 }
+          
+            p{
+            font-size: 5px;
+            text-align: left;
+            }
+          } 
+        }
+      }
+    }
+   a{
+    text-decoration: none; 
+   }
+   
+   
+   
+    
+    
+
+ 
