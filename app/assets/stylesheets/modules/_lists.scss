@@ -36,18 +36,13 @@
          top: 35px;
 
          .categoryTree{
-           //background-color: #fff;
-           //display: flex;
            flex-direction: column;
            position: relative;
 
           .categoryTree--item{
-           // text-decoration: none;
             line-height: 38px;
             background-position: center right;
             background-repeat: no-repeat;
-            //background-size: 20px;
-            //padding-right: 30px;
             padding-left: 5px;
             a{
               color: #333;
@@ -106,4 +101,3 @@
      }
   }
 } 
-

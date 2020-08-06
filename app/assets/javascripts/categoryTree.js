@@ -1,26 +1,4 @@
-//$(function(){
-//  $('li.lists__left__item--category').hover(function(){
-//    $("ul:not(:animated)", this).slideDown();
-//
-//      console.log("hover")
-//  }, function(){
-//      $("ul.categoryTree",this).slideUp();
-//      console.log("not hover")
-//  });
-//});
-//
-//
-//$(function(){
-//  $('li.lists__left__item--category').hover(function(){
-//    //$("ul:not(:animated)", this).slideDown();
-//    $("ul.categoryTree").css(hover,slidDown);
-//      console.log("hover")
-//  }, function(){
-//      $("ul.categoryTree",this).slideUp();
-//      console.log("not hover")
-//  });
-//});
-//
+
 $(function(){
   $('li.lists__left__item--category').hover(function(){
     //$("ul:not(:animated)", this).slideDown();
