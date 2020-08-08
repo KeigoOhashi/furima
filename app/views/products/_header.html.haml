@@ -1,17 +1,17 @@
 .header
-    .header__inner
-      .header__inner__main
-        %h1.header__inner__main__simbol
-          = link_to root_path do
-            = image_tag  "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:'140',height:'40'
-        .search__box
-          %form{"accept-charset" => "UTF-8", :action => "#", :method => "get"}
-            %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-            %input.search__box__input{:name => "key", :placeholder => "キーワードから探す"}/
-          %form.button_to{:action => "/?type=submit", :method => "post"}
-            //%button{:type => "submit"}
-            .search__box__icon
-              = link_to "#" do
-                = image_tag "http://furima.tokyo/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg",width:'20',height:'20'
-            %input{:name => "authenticity_token", :type => "hidden", :value => "OBHVNGwRNEzn3yc5ciRJpZnfmtUjnE/QO/hj6tnrRnJP89jhpZTfkQgysVVgo2r34ymB0rcGL/jiRedonj8dLA=="}/
-          %ul.result__lists
+  .header__inner
+    .header__inner__main
+      %h1.header__inner__main__simbol
+        = link_to root_path do
+          = image_tag  "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:'140',height:'40'
+      .search__box
+        %form{"accept-charset" => "UTF-8", :action => "#", :method => "get"}
+          %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+          %input.search__box__input{:name => "key", :placeholder => "キーワードから探す"}/
+        %form.button_to{:action => "/?type=submit", :method => "post"}
+          //%button{:type => "submit"}
+          .search__box__icon
+            = link_to "#" do
+              = image_tag "http://furima.tokyo/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg",width:'20',height:'20'
+          %input{:name => "authenticity_token", :type => "hidden", :value => "OBHVNGwRNEzn3yc5ciRJpZnfmtUjnE/QO/hj6tnrRnJP89jhpZTfkQgysVVgo2r34ymB0rcGL/jiRedonj8dLA=="}/
+        %ul.result__lists
