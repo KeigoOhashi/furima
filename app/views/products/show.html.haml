@@ -1,134 +1,125 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title FURIMA
-    %meta{:content => "authenticity_token", :name => "csrf-param"}/
-    %meta{:content => "Yhr244urelYXoSu8TCn7lrCPGfRX7AmTZqWZ5q/i/F1ZymckrarllgGRwOsUzFWfkjCJCf/b353cqGIWdgRc/A==", :name => "csrf-token"}/
-    %link{"data-turbolinks-track" => "reload", :href => "/assets/application-2e096b94f60fe4efbadc0b2fe0199ebc3f338134ada36d1d73b67e994e191614.css", :media => "all", :rel => "stylesheet" }/
-    %script{"data-turbolinks-track" => "reload", :src => "/assets/application-26d056ac003f4e4f9d1ad389ac9e51f4f59d6236cc12a75b4ca86167f653c860.js"}
-%body  
+=render partial: "header";
+//=render parcial:"lists";
+.body
   .bread__crumbs
     %ul
       %li
-        %a{:href => "/"} FURIMA
+        =link_to("/") do  
+          FURIMA
+          %i.fa.fa-angle-right
       %li
-        %i.fa.fa-angle-right
+        =link_to("#") do 
+          ベビー・キッズ
+          %i.fa.fa-angle-right
       %li
-        %a{:href => "#"} ベビー・キッズ
+        =link_to("#") do 
+          ベビー服(男女兼用)  ~95cm
+          %i.fa.fa-angle-right
       %li
-        %i.fa.fa-angle-right
-      %li
-        %a{:href => "#"} ベビー服(男女兼用)  ~95cm
-      %li
-        %i.fa.fa-angle-right
-      %li
-        %a{:href => "#"} アウター
-      %li
-        %i.fa.fa-angle-right
-      %li
-        %p product3
-  //=render parcial:"lists/products"
-  .main
-  .main__content
-    .main__content__left__pic
-      .main__content__right
-        .main__content__top
-          .main__content__itembox
-          %h2.main__content__itembox__name ee
-          .main__content__itembox__body
-            %ul
-              %li
-                =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG",width:'500',height:'360'
-                %ul
-                  %li
-                    =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG", width:'75',height:'75'
-                  %li
-                    =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/17/IMG_9069.JPG", width:'75',height:'75'
-            .main__content__itembox__price
-            %span
-              ¥1000
-            .main__content__itembox__price-detail
+        =link_to("#") do 
+          アウター
+          %i.fa.fa-angle-right 
+          %p ee
+  
+  .show__main
+    .show__main__content
+      .show__main__content__left__pic
+        .show__main__content__right
+          .show__main__content__top
+            .show__main__content__itembox
+            %h2.show__main__content__itembox__name ee
+            .show__main__content__itembox__body
+              %ul
+                %li
+                  =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG",width:'500',height:'360'
+                  %ul
+                    %li
+                      =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG", width:'75',height:'75'
+                    %li
+                      =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/17/IMG_9069.JPG", width:'75',height:'75'
+            .show__main__content__itembox__price
+              %span
+                ¥1000
+            .show__main__content__itembox__price-detail
               %span
                 (税込)
                 %span
                   送料込み
-            .item__detail 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰 
-            .table
-              %table
-                %tbody
-                  %tr
-                    %th 出品者
-                    %td ss
-                  %tr
-                    %th カテゴリー
-                    %td
-                      = link_to "#" do  
-                        ベビー・キッズ
-                        %br/
-                      = link_to "#" do  
-                        ベビー服(男の子用)  ~95cm
-                        %br/
-                      = link_to "#" do  
-                        アウター
-                  %tr
-                    %th ブランド
-                    %td
-                  %tr
-                    %th 商品のサイズ
-                    %td
-                  %tr
-                    %th 商品の状態
-                    %td 新品/未使用
-                  %tr
-                    %th 配送料の負担
-                    %td 送料込み（出品者負担）
-                  %tr
-                    %th 発送元の地域
-                    %td
-                      =link_to("#") do 
-                        北海道
-                  %tr
-                    %th 発送日の目安
-                    %td 1-2日で発送
+            .show__item__detail 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰 
+            .show__table
+              %table 
+                %tr
+                  %th 出品者
+                  %td ss
+                %tr
+                  %th カテゴリー
+                  %td
+                    = link_to "#" do  
+                      ベビー・キッズ
+                      %br/
+                    = link_to "#" do  
+                      ベビー服(男の子用)  ~95cm
+                      %br/
+                    = link_to "#" do  
+                      アウター
+                %tr
+                  %th ブランド
+                  %td
+                %tr
+                  %th 商品のサイズ
+                  %td
+                %tr
+                  %th 商品の状態
+                  %td 新品/未使用
+                %tr
+                  %th 配送料の負担
+                  %td 送料込み（出品者負担）
+                %tr
+                  %th 発送元の地域
+                  %td
+                    =link_to("#") do 
+                      北海道
+                %tr
+                  %th 発送日の目安
+                  %td 1-2日で発送
             .optional__area
               %ul
-                %li#optional__like__btn
+                %li.optional__like__btn
                   %i.fa.fa-star
                     お気に入り 0
-              %ul.optional
-                %li.optional__btn
+              %ul.optional__area__center
+                %li.optional__squere__btn
                   =link_to("#") do
                     %i.fa.fa-flag
                       不適切な商品の通報
-            .comment__box
-              %ul.comment__box__contents
-              %form.comment__box__new{"accept-charset" => "UTF-8", :action => "#", :method => "post"}
+            .comment__area
+              %ul.comment__area__box
+              %form.comment__area__box--message{"accept-charset" => "UTF-8", :action => "#", :method => "post"}
                 %input{:name => "utf8", :type => "hidden", :value => "✓"}/
                 %input{:name => "authenticity_token", :type => "hidden", :value => "G9ObIHRCjvFyqlTEAKllvyy7yvnJNdcl+xUbZldMVrjq2yRwXEZJY5P/WDfgf7Y4AfZxQgyxcjvcVF4BiYOR1w=="}/
-                %textarea.comment__box__body{:name => "comment[body]", :required => "required"}
-                  /:preserve       
+                %textarea.comment__area__box--body{:name => "comment[body]", :required => "required"}
+                  :preserve       
                 %p.notice__message
-                相手のことを考え丁寧なコメントを心がけましょう。
-                %br/
-                不快な言葉遣いなどは利用制限や退会処分となることがあります。
-                %br/
+                  相手のことを考え丁寧なコメントを心がけましょう。
+                  %br/
+                  不快な言葉遣いなどは利用制限や退会処分となることがあります。
+                  %br/
               %button.comment__btn{:name => "button", :type => "submit"}/
               %i.fa.fa-comment
                 コメントする
           %ul.links
-          %li
-            =link_to("#") do
-              %i.fa.fa-angle-left
-              %span
-                前の商品
-          %li
-            =link_to("#") do
-              %span 後ろの商品
-              %i.fa.fa-angle-right
-          .related__items
-          =link_to("#") do  
-            ベビー・キッズをもっと見る
+            %li
+              =link_to("#") do
+                %i.fa.fa-angle-left
+                %span
+                  前の商品
+            %li
+              =link_to("#") do
+                %span 後ろの商品
+                %i.fa.fa-angle-right
+          .related__show__items
+            =link_to("#") do  
+              ベビー・キッズをもっと見る
           .product__lists
             .product__lists__list
               =link_to("/products/3") do
@@ -143,14 +134,6 @@
                         %i.fa.fa-star.likeIcon
                         0
                     %p (税込)
-      %aside.appBanner
-        .inner
-          %h2.inner__title だれでもかんたん、人生を変えるフリマアプリ
-          %p.inner__text 今すぐ無料ダウンロード！
-          .inner__icon
-            %a{:href => "#"}
-              %img.linkIcon.aBtn{:src => "/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg"}/
-            %a{:href => "#"}
-              %img.linkIcon.gBtn{:src => "/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg"}/
-        
-        =render partial: "footer";
+//=render partial: "foto";
+//=render partial: "footer";
+//=render partial: "purchase";

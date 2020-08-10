@@ -1,10 +1,9 @@
 
- @import "reset";
+ @import "_reset"; 
  @import "./modules/header";
  @import "font-awesome-sprockets";
  @import "./font-awesome";
  @import "./modules/feature";
- @import "./modules/footer";
  @import "./modules/foto";
  @import "./modules/lists";
  @import "./modules/main";
@@ -12,5 +11,11 @@
  @import "./modules/picture";
  @import "./modules/purchase";
  @import "./modules/product";
+ @import "./modules/footer";
+ @import "./modules/show"
+
+
+
+
  //@import "./modules/flash";
  //@import "./modules/group";
