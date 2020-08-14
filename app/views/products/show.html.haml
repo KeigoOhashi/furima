@@ -1,5 +1,4 @@
 =render partial: "header";
-=render partial:"lists"
 .body
   .bread__crumbs
     %ul
@@ -21,13 +20,13 @@
           %i.fa.fa-angle-right 
           %p ee
   
-  .show__main
-    .show__main__content
-      .show__main__content__brock-1
-        .show__main__content__brock-2
-          .show__main__content__brock-3
-            %h2.show__main__content__itembox__name ee
-            .show__main__content__itembox__photo
+  .main
+    .show__main
+      .show__main__content
+        .show__main__content__brock
+          .show__main__content__brock__top
+            %h2.show__itembox--name ee
+            .show__itembox--photo
               %ul
                 %li
                   =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG",width:'500',height:'360'
@@ -36,15 +35,15 @@
                       =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG", width:'75',height:'75'
                     %li
                       =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/17/IMG_9069.JPG", width:'75',height:'75'
-            .show__main__content__itembox__price
+            .show__itembox--price
               %span
                 ¥1000
-            .show__main__content__itembox__price-detail
+            .show__itembox--price--detail
               %span
                 (税込)
                 %span
                   送料込み
-            .show__item__detail 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰 
+            .show__itembox--text 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰 
             .show__table
               %table 
                 %tr
@@ -83,12 +82,12 @@
                   %td 1-2日で発送
             .optional__area
               %ul
-                %li.optional__area__like__btn
+                %li.optional__area__likeBtn
                   =link_to("#") do
                     %i.fa.fa-star
                       お気に入り 0
               %ul
-                %li.optional__area__squere__btn
+                %li.optional__area__squereBtn
                   =link_to("#") do
                     %i.fa.fa-flag
                       不適切な商品の通報
