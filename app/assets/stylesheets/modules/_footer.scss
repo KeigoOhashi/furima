@@ -1,6 +1,9 @@
 .footer{
   li{
     margin-top: 15px;
+    li:hover{
+      text-decoration:underline;
+     }
     }
   a{
     color: #fff;
@@ -47,10 +50,9 @@
       &__head{
         margin-bottom: 20px;
         font-weight: bold;
-        
       }
     }
- }
+   }
 
       .footer__logo{
         padding-top:0px;
@@ -58,11 +60,12 @@
         color: #fff;
         background-color:#272727;
         text-align: center;
-      }
-         p{
-           font-size: 14px;
-           width: 100%;
-           text-align: center;
-           color: white;
-          } 
-}     
+      
+        p{
+          font-size: 14px;
+          width: 100%;
+          text-align: center;
+          color: white;
+         } 
+      }      
+} 

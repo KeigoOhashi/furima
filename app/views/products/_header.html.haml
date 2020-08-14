@@ -1,0 +1,74 @@
+.header
+  .header__inner
+    .header__inner__main
+      %h1.header__inner__main__simbol
+        = link_to root_path do
+          = image_tag  "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:'140',height:'40'
+      .search__box
+        %form{"accept-charset" => "UTF-8", :action => "#", :method => "get"}
+          %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+          %input.search__box__input{:name => "key", :placeholder => "キーワードから探す"}/
+        %form.button_to{:action => "/?type=submit", :method => "post"}
+          //%button{:type => "submit"}
+          .search__box__icon
+            = link_to "#" do
+              = image_tag "http://furima.tokyo/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg",width:'20',height:'20'
+          %input{:name => "authenticity_token", :type => "hidden", :value => "OBHVNGwRNEzn3yc5ciRJpZnfmtUjnE/QO/hj6tnrRnJP89jhpZTfkQgysVVgo2r34ymB0rcGL/jiRedonj8dLA=="}/
+        %ul.result__lists
+    .lists
+      %ul.lists__left
+        %li.lists__left__item--category
+          =link_to("#") do 
+            カテゴリー
+          .tree__display
+            %ul.categoryTree
+              %li.categoryTree--item
+                =link_to("#") do 
+                  レディース
+              %li.categoryTree--item
+                =link_to("#") do 
+                  メンズ
+              %li.categoryTree--item
+                =link_to("#") do 
+                  ベビー・キッズ
+              %li.categoryTree--item
+                =link_to("#") do 
+                  インテリア・住まい・小物
+              %li.categoryTree--item
+                =link_to("#") do 
+                  本・音楽・ゲーム
+              %li.categoryTree--item
+                =link_to("#") do 
+                  おもちゃ・ホビー・グッズ
+              %li.categoryTree--item
+                =link_to("#") do 
+                  コスメ・香水・美容
+              %li.categoryTree--item
+                =link_to("#") do 
+                  家電・スマホ・カメラ
+              %li.categoryTree--item
+                =link_to("#") do 
+                  スポーツ・レジャー
+              %li.categoryTree--item
+                =link_to("#") do 
+                  ハンドメイド
+              %li.categoryTree--item
+                =link_to("#") do 
+                  チケット
+              %li.categoryTree--item
+                =link_to("#") do 
+                  自動車・オートバイ
+              %li.categoryTree--item
+                =link_to("#") do 
+                  その他
+        %li.lists__left__item--bland
+          =link_to("#") do  
+            ブランド
+          %ul.brands__pulldown.display_none
+      %ul.lists__right
+        %li.lists__right__item--login
+          =link_to("#") do 
+            ログイン
+        %li.lists__right__item--new
+          =link_to("#") do 
+            新規会員登録

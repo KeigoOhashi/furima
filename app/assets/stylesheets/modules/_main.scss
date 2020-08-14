@@ -5,20 +5,19 @@
     background-position: center center;
   
   
-    &__content{
+    .main__content{
       position: absolute;
       left:180px;
       top:100px;
     
-      &--subtitle{
+      .main__content--title{
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
         font-size: 60px;
         line-height: 1.5;
         color: #fff;
       }
     }
-      .main__content--text{
-         //position: absolute;
+      .main__content--subtitle{
          text-shadow: 0 0 5px rgba(0,0,0,0.4);
          font-size: 18px;
          color: #fff;
