@@ -1,0 +1,139 @@
+.header{
+  background: #f8f8f8;
+  width:100%;
+  height: 80px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+    .header__simbol{
+      width:100%;
+      text-align : center;
+      margin-bottom:20px;
+
+    }
+}
+
+.main {
+  background: #f8f8f8;
+  //padding-top: 2px;
+  .new__main{
+    //padding: 5 40px;
+    margin: 0 auto;
+    &__content{ 
+      width: 700px;
+      margin: 0 auto;
+      &__brock{
+        width: 700px;
+        &__top{
+          background-color: #fff;
+          padding: 24px 40px ;
+          //margin-bottom: 20px;
+
+        }
+        }
+        .new__itembox--name{
+           text-align: center;
+           font-weight: bold;
+           font-size: 24px;
+           background-color: #fff;
+         }
+         .new__itembox--photo{
+         margin: 16px 0 0;
+         background-color: #fff;
+         ul{
+           display: flex;
+           justify-content: center;
+           
+           li{
+           margin:0 10px;
+           flex-direction: column;
+           }
+         }
+       }
+      .new__itembox--price{
+        background-color: #fff;
+        margin: 15px auto;
+        font-size: 40px;
+        text-align: center;
+        height: 50px;
+        font-weight: 800 ;
+        a{
+          color: black;
+          letter-spacing: 0,5px;
+         }
+       }
+      .new__itembox--price--detail{
+        background-color: #fff;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+      }
+      .new__itembox--text{
+        height: 200px;
+        width: 100%;
+        border: 1px solid #dedede;
+        background-color: #fff;
+        line-height: 1.5;
+        font-size: 18px;
+        margin: 30px 0;
+      
+        .table_itembox{
+          table{
+            width:100%;
+            border-collapse: collapse;
+            border: 1px solid #dedede;
+          
+            tr{
+              width:100%;
+              th{
+                width: 100%;
+                padding:8px 0;
+                font-size: 16px;
+                text-align: center;
+                background-color: #eee;
+              td{
+                font-size: 14px;  
+              }
+        }
+        }
+      }}
+    }
+         
+          
+      .new__table{
+        margin-bottom: 20px;
+
+        table{
+          width: 100%;
+          height: 375px;
+          border-collapse: collapse;
+          border: 1px solid #dedede;
+        
+         tr{
+           width:100%;
+           height: auto;
+
+           th{
+            width: 20%;
+            background-color: #eee;
+            font-weight: 400;
+            padding: 8px;
+            border: 1px solid #dedede;
+            font-size: 14px;
+            text-align: center;
+           }
+           td{
+            width: 61%;
+            padding: 15px 15px;
+            border: 1px solid #dedede;
+            font-size: 14px;
+            a{
+              color:#afc2f7;
+            }
+          }
+         } 
+        }
+      }  
+    }
+  }}
+
+  
