@@ -6,74 +6,37 @@
     .new__main__content
       .new__main__content__brock
         .new__main__content__brock__top
-          %h2.new__itembox--name 商品名
-          .new__itembox--photo
-            %ul
-              %li
-                =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG",width:'500',height:'360'
-                %ul
-                  %li
-                    =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG", width:'75',height:'75'
-                  %li
-                    =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/17/IMG_9069.JPG", width:'75',height:'75'
-            .new__itembox--price
-              %span
-                ¥
-            .new__itembox--price--detail
-              %span
-                (税込)
-                %span
-                  送料込み
-            .new__itembox--text 
-              //= form_with model: @new, class: :form, local: true do |form| 
-              //= form.text_field :title, placeholder: :商品詳細, class: :form__title 
-              //= form.text_area :content, placeholder: :本文, class: :form__text 
-              .table_itembox
-                %table
-                  %tr
-                  %th　出品詳細 
-                  %td
-            .new__table
-              %table 
-                %tr
-                  %th 出品者
-                  %td 
-                %tr
-                  %th カテゴリー
-                  %td
-                    = link_to "#" do  
-                      ベビー・キッズ
-                      %br/
-                    = link_to "#" do  
-                      ベビー服(男の子用)  ~95cm
-                      %br/
-                    = link_to "#" do  
-                      アウター
-                %tr
-                  %th 商品名
-                  %td
-                %tr
-                  %th ブランド
-                  %td
-                %tr
-                  %th 商品のサイズ
-                  %td
-                %tr
-                  %th 商品の状態
-                  %td 新品/未使用
-                %tr
-                  %th 商品価格
-                  %td 　　　　円
-                %tr
-                  %th 配送料の負担
-                  %td 送料込み（出品者負担）
-                %tr
-                  %th 発送元の地域
-                  %td
-                    =link_to("#") do 
-                      北海道
-                %tr
-                  %th 発送日の目安
-                  %td 1-2日で発送     
+          //.new__itembox--photo 写真（4枚まで掲載可能です）
+          .new__itembox--photo--1
+          .new__itembox--photo--2
+          .new__itembox--photo--3 
+          .new__itembox--photo--4
+        .new__itembox--itemName        
+          %h2 商品名
+          .new__itembox--itemName--form     
+        .new__itembox--detail         
+          %h2 商品詳細      
+          .new__itembox--detail--form     
+        .new__itembox--category
+          カテゴリー
+          .new__itembox--category--form   
+        .new__itembox--brand       
+          ブランド  
+          .new__itembox--brand--form    
+        .new__itembox--condition 
+          コンディション
+          .new__itembox--condition--form 
+        .new__itembox--shipping       
+          発送料の負担   
+          .new__itembox--shipping--form 
+        .new__itembox--area      
+          発送元地域
+          .new__itembox--area--form     
+        .new__itembox--arrivalDay
+          発送日の目安
+          .new__itembox--arrivalDay--form
+        .price
+    //.img-head_icon 
 =render  "footer";                           
 =render partial: "purchase";
+                 
