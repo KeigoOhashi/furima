@@ -108,7 +108,7 @@
             @include icon;
           }
         }
-        .new__itembox--itemName--form{
+        .itemName--form{
           height: 40px;
           margin: 10px 35px 30px;  
           @include two_color;
@@ -122,7 +122,7 @@
             @include icon;
           }
         }
-        .new__itembox--detail--form{
+        .detail--form{
           height: 100px;
           margin: 10px 35px 30px; 
           @include two_color;
@@ -134,7 +134,7 @@
             @include icon;
           }
         }
-        .new__itembox--category--form{
+        .category--form{
           height: 80px;
           margin: 10px 35px 30px; 
           @include two_color;
@@ -145,7 +145,7 @@
           margin:10px;
           margin-bottom: 15px;
           margin-left:40px;
-          &--form{
+          .brand--form{
             height: 40px;
             margin: 10px 20px 30px 1px;
             @include two_color;
@@ -157,7 +157,7 @@
             @include icon;
           }
         }
-        .new__itembox--condition--form{
+        .condition--form{
           height: 100px;
           margin: 10px 35px 30px;  
           @include two_color;
@@ -171,7 +171,7 @@
             @include icon;
           }
         }
-        .new__itembox--shipping--form{
+        .shipping--form{
           height: 40px; 
           margin: 10px 35px 30px; 
           @include two_color;
@@ -183,7 +183,7 @@
             @include icon;
           }
         }
-        .new__itembox--area--form{
+        .area--form{
           height: 40px; 
           margin: 10px 35px 30px; 
           @include two_color;
@@ -195,7 +195,7 @@
             @include icon;
           }
         }
-        .new__itembox--arrivalDay--form{
+        .arrivalDay--form{
           height: 40px; 
           margin: 10px 35px 30px; 
           @include two_color;
@@ -215,5 +215,4 @@
       }
     }
  }
-}        
-      
+}
