@@ -1,3 +1,35 @@
+@mixin icon{
+  width: 32px;
+  height: 19px;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 8px;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  border-radius: 3px;
+}
+@mixin form{
+  font-size: 14px;
+    margin:10px;
+    margin-bottom: 15px;
+    display: flex;
+    margin-left:40px;
+}
+@mixin squere_color{
+  width: 120px;
+  height: 120px;
+  border-collapse: collapse;
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+@mixin two_color{
+  border: 1px solid #dedede; 
+  background-color: #fff;
+}
+
+
+
 .header{
   background: #f8f8f8;
   width:100%;
@@ -21,298 +53,167 @@
     margin: 0 auto;
     height: 1400px;
 
-    .new__main__content{ 
+    &__content{ 
       width: 700px;
       background-color: #fff;
       margin: 0 auto;      
-      padding-top:20px;
+      padding:10px 20px;
 
-      .new__main__content__brock{
+      &__brock{
         width: 700px;
-        padding-bottom: 40px;
 
-        .new__main__content__brock__top{
+        &__top{
           font-size: 14px;
           text-align: left;
           margin:10px;
-          margin-bottom:10px;
           display: flex;
           .img-head_icon{
-            width: 32px;
-            height: 19px;
-            text-align: center;
-            font-size: 12px;
-            margin-left: 8px;
-            color: white;
-            background-color: red;
-            font-weight: bold;
-            border-radius: 3px;
+            @include icon;
           }
         }
         
-          .new__main__content__brock__area{
+          &__area{
            background-color: #fff;
            padding: 15px 50px ;
+           border: 2px double #dedede;
+           margin-bottom: 35px;
   
             .new__itembox--photo__space{
               display: flex;
               justify-content:space-between;
               
-            .new__itembox--photo--1{
-              width: 120px;
-              height: 120px;
-              border-collapse: collapse;
-              border: 1px solid #dedede;
-              background-color: #fff;
-            }
+              .new__itembox--photo--1{
+               @include squere_color;
+              }
               .new__itembox--photo--2{
-               width: 120px;
-               height: 120px;
-               border-collapse: collapse;
-               border: 1px solid #dedede;
-               background-color: #fff;
+               @include squere_color;
               }
               .new__itembox--photo--3{
-               width: 120px;
-               height: 120px;
-               border-collapse: collapse;
-               border: 1px solid #dedede;
-               background-color: #fff;
+               @include squere_color;
               }
               .new__itembox--photo--4{
-               width: 120px;
-               height: 120px;
-               border-collapse: collapse;
-               border: 1px solid #dedede;
-               background-color: #fff;
-                
+               @include squere_color; 
               }
-           }
+            }
           
-        }
+          }
         
     
          
 
-  .new__itembox--itemName{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
+        .new__itembox--itemName{
+          @include form;
+      
+          .img-head_icon{
+            @include icon;
+          }
+        }
+        .new__itembox--itemName--form{
+          height: 40px;
+          margin: 10px 35px 30px;  
+          @include two_color;
+        }
+          
+        
+      
+        .new__itembox--detail{
+          @include form;
+          .img-head_icon{
+            @include icon;
+          }
+        }
+        .new__itembox--detail--form{
+          height: 100px;
+          margin: 10px 35px 30px; 
+          @include two_color;
+        }
+        
+        .new__itembox--category{
+          @include form;
+          .img-head_icon{
+            @include icon;
+          }
+        }
+        .new__itembox--category--form{
+          height: 80px;
+          margin: 10px 35px 30px; 
+          @include two_color;
+        }
+      
+        .new__itembox--brand{
+          font-size: 14px;
+          margin:10px;
+          margin-bottom: 15px;
+          margin-left:40px;
+          &--form{
+            height: 40px;
+            margin: 10px 20px 30px 1px;
+            @include two_color;
+          }    
+        }
+        .new__itembox--condition{
+          @include form;
+          .img-head_icon{
+            @include icon;
+          }
+        }
+        .new__itembox--condition--form{
+          height: 100px;
+          margin: 10px 35px 30px;  
+          @include two_color;
+          padding: 5 10px;
+        } 
+        
+      
+        .new__itembox--shipping{
+          @include form;
+          .img-head_icon{
+            @include icon;
+          }
+        }
+        .new__itembox--shipping--form{
+          height: 40px; 
+          margin: 10px 35px 30px; 
+          @include two_color;
+        }
+        
+        .new__itembox--area{
+          @include form;
+          .img-head_icon{
+            @include icon;
+          }
+        }
+        .new__itembox--area--form{
+          height: 40px; 
+          margin: 10px 35px 30px; 
+          @include two_color;
+        } 
+        
+        .new__itembox--arrivalDay{
+          @include form;
+          .img-head_icon{
+            @include icon;
+          }
+        }
+        .new__itembox--arrivalDay--form{
+          height: 40px; 
+          margin: 10px 35px 30px; 
+          @include two_color;
+        }
 
-    .img-head_icon{
-      width: 32px;
-      height: 19px;
-      text-align: center;
-      font-size: 12px;
-      margin-left: 8px;
-      color: white;
-      background-color: red;
-      font-weight: bold;
-      border-radius: 3px;
-    }
-  }
-    .new__itembox--itemName--form{
-      height: 40px;
-      margin: 10px 35px 30px;  
-      border: 1px solid #dedede; 
-      background-color: #fff;
+        .price{
+          @include form;
+          .img-head_icon{
+            @include icon;
+          } 
+        }
+        .price--form{
+          height: 55px; 
+          margin: 10px 30px 10px 300px; 
+          @include two_color;
+        }
       }
-    
-  
-
-  .new__itembox--detail{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
-    .img-head_icon{
-      width: 32px;
-      height: 19px;
-      text-align: center;
-      font-size: 12px;
-      margin-left: 8px;
-      color: white;
-      background-color: red;
-      font-weight: bold;
-      border-radius: 3px;
     }
-  }
-    
-    .new__itembox--detail--form{
-      height: 100px;
-      margin: 10px 35px 30px; 
-      border: 1px solid #dedede; 
-      background-color: #fff;
+ }
+}        
       
-    }
-  
-  .new__itembox--category{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
-    .img-head_icon{
-      width: 32px;
-      height: 19px;
-      text-align: center;
-      font-size: 12px;
-      margin-left: 8px;
-      color: white;
-      background-color: red;
-      font-weight: bold;
-      border-radius: 3px;
-    }
-  }
-    .new__itembox--category--form{
-      height: 80px;
-      margin: 10px 35px 30px; 
-      border: 1px solid #dedede; 
-      background-color: #fff;
-    }
-  
-
-  .new__itembox--brand{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    margin-left:40px;
-    .new__itembox--brand--form{
-      height: 40px;
-      margin: 10px 20px 30px 1px;
-      border: 1px solid #dedede; 
-      background-color: #fff;
-    }    
-  }
-
-  .new__itembox--condition{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
-    .img-head_icon{
-      @include icon;
-    }
-  }
-    .new__itembox--condition--form{
-      height: 100px;
-      margin: 10px 35px 30px;  
-      border: 1px solid #dedede; 
-      background-color: #fff;
-      padding: 5 10px;
-       
-      
-    } 
-  
-
-  .new__itembox--shipping{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
-    .img-head_icon{
-      width: 32px;
-      height: 19px;
-      text-align: center;
-      font-size: 12px;
-      margin-left: 8px;
-      color: white;
-      background-color: red;
-      font-weight: bold;
-      border-radius: 3px;
-    }
-  }
-    .new__itembox--shipping--form{
-      height: 40px; 
-      margin: 10px 35px 30px; 
-      border: 1px solid #dedede; 
-      background-color: #fff;
-    }
-  
-
-  .new__itembox--area{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
-    .img-head_icon{
-      width: 32px;
-      height: 19px;
-      text-align: center;
-      font-size: 12px;
-      margin-left: 8px;
-      color: white;
-      background-color: red;
-      font-weight: bold;
-      border-radius: 3px;
-    }
-  }
-    .new__itembox--area--form{
-      height: 40px; 
-      margin: 10px 35px 30px; 
-      border: 1px solid #dedede; 
-      background-color: #fff;
-    } 
-  
-
-  .new__itembox--arrivalDay{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
-    .img-head_icon{
-      width: 32px;
-      height: 19px;
-      text-align: center;
-      font-size: 12px;
-      margin-left: 8px;
-      color: white;
-      background-color: red;
-      font-weight: bold;
-      border-radius: 3px;
-    }
-  }
-    .new__itembox--arrivalDay--form{
-      height: 40px; 
-      margin: 10px 35px 30px; 
-      border: 1px solid #dedede; 
-      background-color: #fff;
-      
-    }
-  
-
-  .price{
-    font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:300px;
-    .img-head_icon{
-      width: 32px;
-      height: 19px;
-      text-align: center;
-      font-size: 12px;
-      //margin-left: 8px;
-      color: white;
-      background-color: red;
-      font-weight: bold;
-      border-radius: 3px;
-    } 
-  }
-    .new__itembox--price--form{
-      height: 55px; 
-      margin: 10px 30px 30px 300px; 
-      border: 1px solid #dedede; 
-      background-color: #fff;
-    }
-  }
-  }
-  }
-}  
