@@ -7,56 +7,65 @@
       .new__main__content__brock
         .new__main__content__brock__top
           写真（最大8枚まで掲載可能です）
-          .img-head_icon
+          .head__icon
             必須  
         .new__main__content__brock__area
-          .new__itembox--photo__space 
-            .new__itembox--photo--1
-            .new__itembox--photo--2
-            .new__itembox--photo--3 
-            .new__itembox--photo--4
-        .new__itembox--itemName        
-          %h2 商品名
-          .img-head_icon
-            %span 必須       
-        .itemName--form     
-        .new__itembox--detail         
-          %h2 商品詳細 
-          .img-head_icon
-            %span 必須       
-        %form.detail--form     
-        .new__itembox--category
-          %h2 カテゴリー
-          .img-head_icon
-            %span 必須  
-        %form.category--form   
-        .new__itembox--brand       
-          %h2 ブランド  
-          .brand--form    
-        .new__itembox--condition 
-          %h2 コンディション
-          .img-head_icon
-            %span 必須  
-        %form.condition--form 
-        .new__itembox--shipping       
-          %h2 発送料の負担 
-          .img-head_icon
-            %span 必須  
-        .shipping--form 
-        .new__itembox--area      
-          %h2 発送元地域
-          .img-head_icon
-            %span 必須
-        .area--form     
-        .new__itembox--arrivalDay
-          %h2発送日の目安
-          .img-head_icon
-            %span 必須
-        .arrivalDay--form
+          .photo__space 
+            .photo__space__photo--1
+            .photo__space__photo--2
+            .photo__space__photo--3 
+            .photo__space__photo--4
+        .itemName   
+          .itemName--top        
+            %h2 商品名
+            .head__icon
+              必須       
+          .itemName__form  
+        .detail   
+          .detail--top         
+            %h2 商品詳細 
+            .head__icon
+              必須       
+          %form.detail__form 
+        .category    
+          .category--top
+            %h2 カテゴリー
+            .head__icon
+              必須  
+          %form.category__form 
+        .brand  
+          .brand--top       
+            %h2 ブランド  
+          .brand__form 
+        .condition   
+          .condition--top 
+            %h2 コンディション
+            .head__icon
+              必須  
+          %form.condition__form 
+        .shipping
+          .shipping--top     
+            %h2 発送料の負担 
+            .head__icon
+              必須  
+          .shipping__form 
+        .area  
+          .area--top      
+            %h2 発送元地域
+            .head__icon
+              必須
+          .area__form 
+        .arrivalDay    
+          .arrivalDay--top
+            %h2発送日の目安
+            .head__icon
+              必須
+          .arrivalDay__form
         .price
-          %h2 価格　
-          .img-head_icon
-            %span 必須
-        .price--form                               
+          .price--top
+            %h2 価格
+            .head__icon
+              必須
+          .price__form                               
 =render "purchase";
 =render "footer"; 

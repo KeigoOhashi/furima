@@ -11,10 +11,10 @@
 }
 @mixin form{
   font-size: 14px;
-    margin:10px;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left:40px;
+  margin:10px;
+  margin-bottom: 15px;
+  display: flex;
+  margin-left:40px;
 }
 @mixin squere_color{
   width: 120px;
@@ -26,6 +26,9 @@
 @mixin two_color{
   border: 1px solid #dedede; 
   background-color: #fff;
+}
+@mixin margin{
+  margin: 10px 35px 30px; 
 }
 
 
@@ -67,7 +70,7 @@
           text-align: left;
           margin:10px;
           display: flex;
-          .img-head_icon{
+          .head__icon{
             @include icon;
           }
         }
@@ -78,20 +81,20 @@
            border: 2px double #dedede;
            margin-bottom: 35px;
   
-            .new__itembox--photo__space{
+            .photo__space{
               display: flex;
               justify-content:space-between;
               
-              .new__itembox--photo--1{
+              &__photo--1{
                @include squere_color;
               }
-              .new__itembox--photo--2{
+              &__photo--2{
                @include squere_color;
               }
-              .new__itembox--photo--3{
+              &__photo--3{
                @include squere_color;
               }
-              .new__itembox--photo--4{
+              &__photo--4{
                @include squere_color; 
               }
             }
@@ -99,120 +102,146 @@
           }
         
     
-         
-
-        .new__itembox--itemName{
-          @include form;
-      
-          .img-head_icon{
-            @include icon;
+        .itemName{
+          margin:0 auto;
+          &--top{
+            @include form;
+            .head__icon{
+              @include icon;
+            }
           }
-        }
-        .itemName--form{
-          height: 40px;
-          margin: 10px 35px 30px;  
-          @include two_color;
-        }
-          
-        
-      
-        .new__itembox--detail{
-          @include form;
-          .img-head_icon{
-            @include icon;
-          }
-        }
-        .detail--form{
-          height: 100px;
-          margin: 10px 35px 30px; 
-          @include two_color;
-        }
-        
-        .new__itembox--category{
-          @include form;
-          .img-head_icon{
-            @include icon;
-          }
-        }
-        .category--form{
-          height: 80px;
-          margin: 10px 35px 30px; 
-          @include two_color;
-        }
-      
-        .new__itembox--brand{
-          font-size: 14px;
-          margin:10px;
-          margin-bottom: 15px;
-          margin-left:40px;
-          .brand--form{
+          &__form{
             height: 40px;
-            margin: 10px 20px 30px 1px;
+            @include margin;  
+            @include two_color;
+          }
+        } 
+        
+        .detail{
+          margin:0 auto;
+          &--top{
+            @include form;
+            .head__icon{
+              @include icon;
+            }
+          }
+          &__form{
+            height: 100px;
+            @include margin; 
+            @include two_color;
+          }
+        }
+
+        .category{
+          margin:0 auto;
+          &--top{
+            @include form;
+            .head__icon{
+              @include icon;
+            }
+          }
+          &__form{
+            height: 80px;
+            @include margin; 
+            @include two_color;
+          }
+        }
+
+        .brand {
+          margin:0 auto;
+          &--top{
+            font-size: 14px;
+            margin:10px;
+            margin-bottom: 15px;
+            margin-left:40px;
+          }
+          &__form{
+            height: 40px;
+            @include margin;
             @include two_color;
           }    
         }
-        .new__itembox--condition{
-          @include form;
-          .img-head_icon{
-            @include icon;
+
+        .condition{
+          margin:0 auto;
+          &--top{
+            @include form;
+            .head__icon{
+              @include icon;
+            }
+          }
+          &__form{
+            height: 100px;
+            @include margin;  
+            @include two_color;
+            padding: 5 10px;
+          } 
+        }
+
+        .shipping{
+          margin:0 auto;
+          &--top{
+            @include form;
+            .head__icon{
+              @include icon;
+            }
+          }
+          &__form{
+            height: 40px; 
+            @include margin; 
+            @include two_color;
           }
         }
-        .condition--form{
-          height: 100px;
-          margin: 10px 35px 30px;  
-          @include two_color;
-          padding: 5 10px;
-        } 
-        
-      
-        .new__itembox--shipping{
-          @include form;
-          .img-head_icon{
-            @include icon;
+
+        .area{
+          margin:0 auto;
+          .area--top{
+            @include form;
+            .head__icon{
+              @include icon;
+            }
           }
+          .area__form{
+            height: 40px; 
+            @include margin; 
+            @include two_color;
+          } 
         }
-        .shipping--form{
-          height: 40px; 
-          margin: 10px 35px 30px; 
-          @include two_color;
-        }
-        
-        .new__itembox--area{
-          @include form;
-          .img-head_icon{
-            @include icon;
+
+        .arrivalDay{
+          margin:0 auto;
+          &--top{
+            @include form;
+            .head__icon{
+              @include icon;
+            }
           }
-        }
-        .area--form{
-          height: 40px; 
-          margin: 10px 35px 30px; 
-          @include two_color;
-        } 
-        
-        .new__itembox--arrivalDay{
-          @include form;
-          .img-head_icon{
-            @include icon;
+          &__form{
+            height: 40px; 
+            @include margin;
+            @include two_color;
           }
-        }
-        .arrivalDay--form{
-          height: 40px; 
-          margin: 10px 35px 30px; 
-          @include two_color;
         }
 
         .price{
-          @include form;
-          .img-head_icon{
-            @include icon;
-          } 
-        }
-        .price--form{
-          height: 55px; 
-          margin: 10px 30px 10px 300px; 
-          @include two_color;
+          margin:0 auto;
+          &--top{
+            font-size: 14px;
+            margin:10px;
+            margin-bottom: 15px;
+            display: flex;
+            margin-left:300px;
+            .head__icon{
+              @include icon;
+            } 
+          }
+          &__form{
+            height: 55px; 
+            margin: 10px 30px 10px 300px; 
+            @include two_color;
+          }
         }
       }
     }
- }
+  }
 }
