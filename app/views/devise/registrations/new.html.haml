@@ -18,7 +18,7 @@
           .single-header__progress__round
 .single-main__container
   .single-main__container__orm__frame
-    = form_for(@user, url: user_registration_path) do |f|
+    = form_for(@user, url: addresses_path) do |f|
       = render "devise/shared/error_messages", resource: @user
       .form-group
         = f.label :ニックネーム
@@ -67,5 +67,5 @@
           「次へ進む」のボタンを押すことにより、
           = link_to "利用規約", "#" , target:"_blank"
           に同意したものとみなします
-        = f.submit '次へ', class: "btn-default btn-red", url: "address_path"
+        = f.submit '次へ', class: "btn-default btn-red", url: "product_addresses_path"
     = render "devise/registrations/registration_footer"
