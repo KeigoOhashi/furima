@@ -1,5 +1,6 @@
 .foto{
   position: relative;
+
   display: flex;
   align-items: center;
   background-size: cover;
@@ -22,8 +23,8 @@
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       line-height: 2.0;
     }
-  }
-}
+  
+  
     .foto__box--icon{
       width: 100%;
       display: flex;
@@ -35,6 +36,7 @@
        a:hover{
          opacity:0.5;
         }
-       }
-  
+   } }
+ }
 
+    
