@@ -1,138 +1,138 @@
-=render partial: "header";
-.body
-  .bread__crumbs
-    %ul
-      %li
-        =link_to("/") do  
-          FURIMA
-          %i.fa.fa-angle-right
-      %li
-        =link_to("#") do 
-          ベビー・キッズ
-          %i.fa.fa-angle-right
-      %li
-        =link_to("#") do 
-          ベビー服(男女兼用)  ~95cm
-          %i.fa.fa-angle-right
-      %li
-        =link_to("#") do 
-          アウター
-          %i.fa.fa-angle-right 
-          %p ee
+= render partial: "header";
+.bread__crumbs
+  %ul
+    %li
+      =link_to("/") do  
+        FURIMA
+        %i.fa.fa-angle-right
+    %li
+      =link_to("#") do 
+        ベビー・キッズ
+        %i.fa.fa-angle-right
+    %li
+      =link_to("#") do 
+        ベビー服(男女兼用)  ~95cm
+        %i.fa.fa-angle-right
+    %li
+      =link_to("#") do 
+        アウター
+        %i.fa.fa-angle-right 
+        %p ee
   
-  .main
-    .show__main
-      .show__main__content
-        .show__main__content__brock
-          .show__main__content__brock__top
-            %h2.show__itembox--name ee
-            .show__itembox--photo
-              %ul
-                %li
-                  =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG",width:'500',height:'360'
+.main
+  .show__main
+    .show__main__content
+      .show__main__content__brock
+        .show__main__content__brock__top
+          %h2.show__itembox--name ee
+          .show__itembox--photo
+            %ul
+              %li
+                =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG",width:'500',height:'360'
+                %ul
+                  %li
+                    =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG", width:'75',height:'75'
+                  %li
+                    =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/17/IMG_9069.JPG", width:'75',height:'75'
+          .show__itembox--price
+            %span
+              ¥1000
+          .show__itembox--price--detail
+            %span
+              (税込)
+              %span
+                送料込み
+          .show__itembox--text 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰 
+          .show__table
+            %table 
+              %tr
+                %th 出品者
+                %td ss
+              %tr
+                %th カテゴリー
+                %td
+                  = link_to "#" do  
+                    ベビー・キッズ
+                    %br/
+                  = link_to "#" do  
+                    ベビー服(男の子用)  ~95cm
+                    %br/
+                  = link_to "#" do  
+                    アウター
+              %tr
+                %th ブランド
+                %td
+              %tr
+                %th 商品のサイズ
+                %td
+              %tr
+                %th 商品の状態
+                %td 新品/未使用
+              %tr
+                %th 配送料の負担
+                %td 送料込み（出品者負担）
+              %tr
+                %th 発送元の地域
+                %td
+                  =link_to("#") do 
+                    北海道
+              %tr
+                %th 発送日の目安
+                %td 1-2日で発送
+          .optional__area
+            %ul
+              %li.optional__area__likeBtn
+                =link_to("#") do
+                  %i.fa.fa-star
+                    お気に入り 0
+            %ul
+              %li.optional__area__squereBtn
+                =link_to("#") do
+                  %i.fa.fa-flag
+                    不適切な商品の通報
+          .show__comment__area
+            %ul.show__comment__area__box
+            %form.show__comment__area__box--message{"accept-charset" => "UTF-8", :action => "#", :method => "post"}
+              %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+              %input{:name => "authenticity_token", :type => "hidden", :value => "G9ObIHRCjvFyqlTEAKllvyy7yvnJNdcl+xUbZldMVrjq2yRwXEZJY5P/WDfgf7Y4AfZxQgyxcjvcVF4BiYOR1w=="}/
+              %textarea.show__comment__area__box--body{:name => "comment[body]", :required => "required"}
+                :preserve       
+              %p.notice__message
+                相手のことを考え丁寧なコメントを心がけましょう。
+                %br/
+                不快な言葉遣いなどは利用制限や退会処分となることがあります。
+                %br/
+            %button.show__comment__area__btn{:name => "button", :type => "submit"}/
+            %i.fa.fa-comment
+              コメントする
+        %ul.links
+          %li
+            =link_to("#") do
+              %i.fa.fa-angle-left
+              %span
+                前の商品
+          %li
+            =link_to("#") do
+              %span 後ろの商品
+              %i.fa.fa-angle-right
+        .related__show__items
+          =link_to("#") do  
+            ベビー・キッズをもっと見る
+        .show__product__lists
+          .show__product__lists__list
+            =link_to("/products/3") do
+              %figure.show__product__lists__list--img
+                =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png"
+              .product__lists__list--body
+                %h3.name product3
+                .details
                   %ul
+                    %li 30000円
                     %li
-                      =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG", width:'75',height:'75'
-                    %li
-                      =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/17/IMG_9069.JPG", width:'75',height:'75'
-            .show__itembox--price
-              %span
-                ¥1000
-            .show__itembox--price--detail
-              %span
-                (税込)
-                %span
-                  送料込み
-            .show__itembox--text 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰 
-            .show__table
-              %table 
-                %tr
-                  %th 出品者
-                  %td ss
-                %tr
-                  %th カテゴリー
-                  %td
-                    = link_to "#" do  
-                      ベビー・キッズ
-                      %br/
-                    = link_to "#" do  
-                      ベビー服(男の子用)  ~95cm
-                      %br/
-                    = link_to "#" do  
-                      アウター
-                %tr
-                  %th ブランド
-                  %td
-                %tr
-                  %th 商品のサイズ
-                  %td
-                %tr
-                  %th 商品の状態
-                  %td 新品/未使用
-                %tr
-                  %th 配送料の負担
-                  %td 送料込み（出品者負担）
-                %tr
-                  %th 発送元の地域
-                  %td
-                    =link_to("#") do 
-                      北海道
-                %tr
-                  %th 発送日の目安
-                  %td 1-2日で発送
-            .optional__area
-              %ul
-                %li.optional__area__likeBtn
-                  =link_to("#") do
-                    %i.fa.fa-star
-                      お気に入り 0
-              %ul
-                %li.optional__area__squereBtn
-                  =link_to("#") do
-                    %i.fa.fa-flag
-                      不適切な商品の通報
-            .show__comment__area
-              %ul.show__comment__area__box
-              %form.show__comment__area__box--message{"accept-charset" => "UTF-8", :action => "#", :method => "post"}
-                %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-                %input{:name => "authenticity_token", :type => "hidden", :value => "G9ObIHRCjvFyqlTEAKllvyy7yvnJNdcl+xUbZldMVrjq2yRwXEZJY5P/WDfgf7Y4AfZxQgyxcjvcVF4BiYOR1w=="}/
-                %textarea.show__comment__area__box--body{:name => "comment[body]", :required => "required"}
-                  :preserve       
-                %p.notice__message
-                  相手のことを考え丁寧なコメントを心がけましょう。
-                  %br/
-                  不快な言葉遣いなどは利用制限や退会処分となることがあります。
-                  %br/
-              %button.show__comment__area__btn{:name => "button", :type => "submit"}/
-              %i.fa.fa-comment
-                コメントする
-          %ul.links
-            %li
-              =link_to("#") do
-                %i.fa.fa-angle-left
-                %span
-                  前の商品
-            %li
-              =link_to("#") do
-                %span 後ろの商品
-                %i.fa.fa-angle-right
-          .related__show__items
-            =link_to("#") do  
-              ベビー・キッズをもっと見る
-          .show__product__lists
-            .show__product__lists__list
-              =link_to("/products/3") do
-                %figure.show__product__lists__list--img
-                  =image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png"
-                .product__lists__list--body
-                  %h3.name product3
-                  .details
-                    %ul
-                      %li 30000円
-                      %li
-                        %i.fa.fa-star.likeIcon
-                        0
-                    %p (税込)
+                      %i.fa.fa-star.likeIcon
+                      0
+                  %p (税込)
+
 =render partial: "foto";
 =render partial: "footer";
 =render partial: "purchase";
