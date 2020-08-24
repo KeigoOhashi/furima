@@ -31,10 +31,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     render :new_address
   end
 
-  def new_address
-    
-  end
-
   def create_address
     @user = User.new(session["devise.regist_data"]["user"])
     @address = Address.new(address_params)
@@ -44,8 +40,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
     @user.build_address(@address.attributes)
     session["address"] = @address.attributes
-    @creditcard = @user.build_creditcard
-    render :new_credit_card
+    # @creditcard = @user.build_creditcard
+    # render :new_credit_card
   end
 
   # def create_creditcard

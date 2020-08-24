@@ -1,0 +1,34 @@
+.header
+  .header__contents
+    .header__contents__top
+      .header__contents__top__logo
+        =link_to image_tag("fmarket_logo_red.svg",width:"134",height:"36"), root_path  
+      .header__contents__top__form
+        = search_form_for(@q,url:products_searches_path) do |f|
+          = f.search_field :name_cont,  class: 'form', placeholder: '何かお探しですか？', id: "form__box"
+      .search-buttom
+        = button_tag type:'submit',class:'search-button'
+        .fas.fa-search-minus
+    .header__contents__below
+      .header__contents__below__search
+        .header__contents__below__search__category
+          %span.fas.fa-list-ul.icon
+          =link_to "カテゴリーから探す", categories_path, class:"search__category"
+          = render partial: "home/nav-category", parent: @parents
+        .header__contents__below__search__brand
+          %span.fas.fa-tag.icon
+          =link_to "ブランドから探す", "/brands/",class:"search__brands"
+          = render partial: "home/nav-brand"
+      .header__contents__below__personal
+        .header__contents__below__personal__likes
+          %span.fas.fa-heart.login__icon
+          =link_to "いいね！",ready_users_path,class:"likes"
+        .header__contents__below__personal__notification
+          %span.fas.fa-bell.login__icon
+          =link_to "お知らせ", ready_users_path,class:"notification"
+        .header__contents__below__personal__todo
+          %span.fas.fa-check.login__icon
+          =link_to "やることリスト", ready_users_path,class:"todo"
+        .header__contents__below__personal__mypage
+          %span.fas.fa-user-circle.login__icon
+          =link_to "マイページ", user_path(current_user.id),class:"mypage"
