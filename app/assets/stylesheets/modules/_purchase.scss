@@ -4,25 +4,26 @@
     &:hover{
      opacity:0.5;
    }
-    width: 80px;
-    height: 80px;
-    background: #3CCACE;
-    text-align: center;
-    border-radius: 4%;
-    bottom: 32px;
-    right: 32px;
-    position: fixed;
-    padding: 15px;
+  
+  width: 80px;
+  height: 80px;
+  background: #3CCACE;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
      
    .purchase__btn__text{
      color: #fff;
-     display: block;
+     //display: block;
      font-size: 16px;
      text-decoration: none;
-     //margin:10px auto;
+     margin:10px auto;
    }
    .purchase__btn__icon{
      margin:0 auto;  
    }
-   }
+  }
 }
