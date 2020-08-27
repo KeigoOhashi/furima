@@ -22,6 +22,12 @@ class ProductsController < ApplicationController
   def show
   end
 
+  def purchase
+    @product_buyer= Product.find(params[:id])
+    @product_buyer.update( buyer_id: current_user.id)
+    redirect_to purchased_product_path
+  end
+
   private
     def product_params
       params.require(:product).permit(:name,:price,:description,:brand,:status,:postage,:shipping_area,:shipping_days,images_attributes: [:product_image,:_destroy,:id]).merge(user_id: current_user.id)
