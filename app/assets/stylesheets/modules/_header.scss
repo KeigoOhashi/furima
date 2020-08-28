@@ -1,13 +1,17 @@
-  .header{
+.body{
+  margin: 0px;
+  padding:0px;
+
+  .header__top{
+    background: #f8f8f8;
     padding: 0 60px;
     font-family:  Helvetica, Arial ;
-    
-      
+    height: 100px;
+     
     
     &__inner{
       max-width: 1040px;
       width: 100%;
-      height: 92px;
       margin: 0 auto;
       padding: 15px 0 0;
       
@@ -20,11 +24,9 @@
           align-items: center;
           margin-right: 30px;
           border-radius: 4px;
-       }
+       
       }
      }
-    }
-
     .search__box{
       width: 820px;
       height: 34px;
@@ -47,7 +49,7 @@
          height: 34px;
          padding: 0 0 0 10px;
          }
-        }
+        
          
       .button_to {
           position: relative;
@@ -73,18 +75,25 @@
       border:2px;
       z-index: 10;
      }
+    }
  .lists{
   font-size: 13px;
   display: flex;
-  margin-bottom: 10px;
   justify-content : space-between;
-  
+  margin: 10px auto;
   
     &__left{
       position: relative;
       display: flex;
     
       &__item--category{
+        a{
+          color: #333;
+          font-size: 13px;
+          &:hover{
+            color:orange;
+          }
+         }
         padding: 0;
         list-style: none;
         line-height: 32px;
@@ -93,15 +102,9 @@
         background-size: 18px;
         padding-right: 30px;
        
-         a{
-          color: #333;
-          font-size: 13px;
-          &:hover{
-            color:orange;
-          }
-         }
+         
       }  
-    }
+    
        .tree__display{
          z-index: 10;
          display: none;
@@ -115,16 +118,17 @@
            position: relative;
 
           &--item{
-            line-height: 38px;
-            background-position: center right;
-            background-repeat: no-repeat;
-            padding-left: 5px;
             a{
               color: #333;
               font-size: 13px;
               &:hover{
                 color:orange;
                }
+            line-height: 38px;
+            background-position: center right;
+            background-repeat: no-repeat;
+            padding-left: 5px;
+            
           }
          }
         }
@@ -144,14 +148,14 @@
               color:orange;
            }
           }
-           .brands__pulldown.display_none{
+           .brands__pulldown{
              position: absolute;
              z-index: 1;
              background-color: #fff;
              text-decoration : none;
           }  
       }
-
+    }
   .lists__right{
     margin-left: auto;
     display: flex;
@@ -175,4 +179,7 @@
       }
      }
   }
-}    
+} 
+}
+}
+}

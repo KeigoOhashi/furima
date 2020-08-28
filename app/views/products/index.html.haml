@@ -1,9 +1,8 @@
-
 .body
-  .header
-    .header__inner
-      .header__inner__main
-        %h1.header__inner__main__simbol
+  .header__top
+    .header__top__inner
+      .header__top__inner__main
+        %h1.header__top__inner__main__simbol
           = link_to root_path do
             = image_tag  "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:'140',height:'40'
         .search__box
@@ -78,18 +77,17 @@
             %li.lists__right__item--new
               =link_to(new_user_registration_path) do 
                 新規会員登録
-  
-  .main
+  .main__top
     = image_tag "http://furima.tokyo/assets/bg-mainVisual-pict_pc-a1a4be0d864c29338b03d163957f9fd26b20f7c1fa0d05c17b603ec54d249ebe.jpg",width:'100%',height:'540'
-    %section.main__content
-      %h2.main__content--title
+    %section.main__top__content
+      %h2.main__top__content--title
         %br/
         人生を変えるフリマアプリ
-      %p.main__content--subtitle
+      %p.main__top__content--subtitle
         FURIMAはだれでもかんたんに出品・購入できる
         %br/
         フリマアプリです
-      .main__content--btn
+      .main__top__content--btn
         = link_to "#" do
           = image_tag"http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg",width:'180',height:'53'
         = link_to "#" do
