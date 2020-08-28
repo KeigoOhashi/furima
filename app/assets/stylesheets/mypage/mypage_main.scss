@@ -12,7 +12,7 @@
     border-style: solid;
     border-width: 0;
     margin-top:45px;
-    //display:flex;
+    
   
     .main-ap {
       width: 600px;
@@ -47,6 +47,8 @@
            font-size: 24px;
            background-image: white;
            
+           
+           
          }
          .main-ap__profile__name--box{
             padding: 10px 24px;
@@ -59,9 +61,14 @@
            }
             .main-ap__profile__name--nickname{
               padding: 10px 24px;
-              height: 40px;
+              height: 20px;
+              width: 120px;
+              margin:0 auto;
+              margin-bottom: 15px;
               text-align: center;
               font-size: 24px;
+              border-bottom:double;
+              border-color:#C0C0C0;
               
               }
               .main-ap__profile__name--message{
@@ -73,7 +80,16 @@
                 
           }
           .main-ap__form-group{
-
+            margin-top:20px;
+            border: solid 1px;
+            height: 25px;
+            padding: 15px 24px 10px;
+            text-align: center;
+            border-color:#C0C0C0;
+            font-size:20px;
+            color:white;
+            background-color:#FF1D1A; 
+            
           }
           
     
