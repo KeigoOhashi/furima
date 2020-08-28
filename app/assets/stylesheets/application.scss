@@ -13,10 +13,11 @@
  @import"./modules/purchase";
  @import "./modules/show";
  @import "./modules/registrations";
-
-
-
-
-
- //@import "./modules/flash";
- //@import "./modules/group";
+ @import "./mypage/footer";
+ @import "./mypage/header_login";
+ @import "./mypage/mypage_side";
+ @import "./mypage/breadcrumbs";
+ @import "mixin";
+ @import "./mypage/bottom";
+ @import "./mypage/footer";
+ @import "./mypage/mypage_main";

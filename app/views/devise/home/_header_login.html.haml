@@ -1,34 +1,39 @@
-.header
-  .header__contents
-    .header__contents__top
-      .header__contents__top__logo
-        =link_to image_tag("fmarket_logo_red.svg",width:"134",height:"36"), root_path  
-      .header__contents__top__form
-        = search_form_for(@q,url:products_searches_path) do |f|
-          = f.search_field :name_cont,  class: 'form', placeholder: '何かお探しですか？', id: "form__box"
-      .search-buttom
-        = button_tag type:'submit',class:'search-button'
-        .fas.fa-search-minus
-    .header__contents__below
-      .header__contents__below__search
-        .header__contents__below__search__category
-          %span.fas.fa-list-ul.icon
-          =link_to "カテゴリーから探す", categories_path, class:"search__category"
-          = render partial: "home/nav-category", parent: @parents
-        .header__contents__below__search__brand
-          %span.fas.fa-tag.icon
-          =link_to "ブランドから探す", "/brands/",class:"search__brands"
-          = render partial: "home/nav-brand"
-      .header__contents__below__personal
-        .header__contents__below__personal__likes
-          %span.fas.fa-heart.login__icon
-          =link_to "いいね！",ready_users_path,class:"likes"
-        .header__contents__below__personal__notification
-          %span.fas.fa-bell.login__icon
-          =link_to "お知らせ", ready_users_path,class:"notification"
-        .header__contents__below__personal__todo
-          %span.fas.fa-check.login__icon
-          =link_to "やることリスト", ready_users_path,class:"todo"
-        .header__contents__below__personal__mypage
-          %span.fas.fa-user-circle.login__icon
-          =link_to "マイページ", user_path(current_user.id),class:"mypage"
+.header__in
+  .header__in__contents
+    .header__in__contents__top
+      .header__in__contents__top__image
+        =link_to image_tag("http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg",width:"145",height:"45"), root_path  
+      .header__in__contents__top__form
+        %form{"accept-charset" => "UTF-8", :action => "#", :method => "get"}
+          %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+          %input.search__box__input{:name => "key", :placeholder => "何かお探しですか？"}/
+        %form.button_to{:action => "/?type=submit", :method => "post"}
+        //= search_form_for(@q,url:"/") do |f|
+        //= f.search_field :name_cont,  class: 'form', placeholder: '何かお探しですか？', id: "form__box"
+      .search__icon
+        = link_to "#" do
+          = image_tag "http://furima.tokyo/assets/icon-search-60a83ada85216fe00789cd16065281694d9a08948275fef83683fadcf131d84d.svg",width:'20',height:'20'
+        %input{:name => "authenticity_token", :type => "hidden", :value => "OBHVNGwRNEzn3yc5ciRJpZnfmtUjnE/QO/hj6tnrRnJP89jhpZTfkQgysVVgo2r34ymB0rcGL/jiRedonj8dLA=="}/
+    .header__in__contents__below
+      .header__in__contents__below__search
+        .header__in__contents__below__search__category
+          %span.fas.fa-list-ul.icon カテゴリーから探す
+          //=link_to "カテゴリーから探す", categories_path, class:"search__category"
+          //= render partial: "home/nav-category", parent: @parents
+        .header__in__contents__below__search__brand
+          %span.fas.fa-tag.icon ブランドから探す
+          //=link_to "ブランドから探す", "/brands/",class:"search__brands"
+          //= render partial: "home/nav-brand"
+      .header__in__contents__below__personal
+        .header__in__contents__below__personal__likes
+          %span.fas.fa-heart.login__icon いいね
+          //=link_to "いいね！",ready_users_path,class:"likes"
+        .header__in__contents__below__personal__notification
+          %span.fas.fa-bell.login__icon お知らせ
+          //=link_to "お知らせ", ready_users_path,class:"notification"
+        .header__in__contents__below__personal__todo
+          %span.fas.fa-check.login__icon やることリスト
+          //=link_to "やることリスト", ready_users_path,class:"todo"
+        .header__in__contents__below__personal__mypage
+          %span.fas.fa-user-circle.login__icon マイページ
+          //=link_to "マイページ", user_path(current_user.id),class:"mypage"
