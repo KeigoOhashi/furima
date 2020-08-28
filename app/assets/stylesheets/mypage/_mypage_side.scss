@@ -1,0 +1,94 @@
+.side-content {
+  width: 280px;
+  height: 980px;
+  margin: 45px 40px 0 75px;
+  float: left;
+  display: block;
+  //padding: 0;
+  a{
+    opacity: 1;
+    &:hover{
+     opacity:0.5;
+   }
+  }
+  .mypage-nav {
+    width: 280px;
+    height: 980px;
+    margin-left:50px;
+    &-list {
+      width: 280px;
+      height: 600px;
+      list-style-type : none;
+      padding:5px 0px;
+      border-bottom:1px solid ;//$Background;
+      &-item {
+        width: 248px;
+        margin:3px 0px;
+        position: relative;
+        display: block;
+        background: #fff;
+        font-size: 14px;
+        color: #333;
+        box-sizing: inherit;
+        padding: 16px;
+        line-height: 14px;
+        text-decoration: none;
+        .icon-arrow-right {
+          width: 8.594px;
+          height: 14px;
+        }
+      }
+    }
+    .mypage-nav-head-setting {
+      width: 280px;
+      color: #333;
+      margin: 20px 10px;
+      font-size: 16px;
+    }
+    .mypage-nav-list-setting {
+      width: 280px;
+      height: 342px;
+      &-item {
+        width: 248px;
+        height: 16px;
+        margin:3px 0px;
+        position: relative;
+        display: block;
+        padding: 16px;
+        background: #fff;
+        font-size: 14px;              
+        color: #333;
+        line-height: 14px;
+        text-decoration: none;
+      }                        
+    }        
+    //.mypage-nav-head-merpay {
+    //  width: 280px;
+    //  color: #333;
+    //  margin: 40px 0 0;
+    //  font-size: 16px;
+    //}
+    //.mypage-nav-list-merpay {
+    //  width: 280px;
+    //  height: 97px;
+    //  &-item {
+    //    width: 248px;
+    //    height: 16px;
+    //    position: relative;
+    //    display: block;
+    //    padding: 16px;
+    //    background: #fff;
+    //    font-size: 14px;              
+    //    color: #333;
+    //    line-height: 14px;
+    //    text-decoration: none;
+    //  }                        
+    //} 
+    
+  }     
+}
+.clearfix:after {
+content: "";
+clear: both;
+display: block;
+}
