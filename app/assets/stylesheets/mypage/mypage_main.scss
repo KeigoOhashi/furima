@@ -1,9 +1,9 @@
-.mypage_ap{
+.mypage{
   margin:0 auto;
   padding: 0px;
   overflow-y: hidden;
 
-  .mypage__ap__profile {
+  &__profile {
     margin:0 auto;
     width: 780px;
     height: 1000px;
@@ -14,76 +14,71 @@
     margin-top:45px;
     
   
-    .main-ap {
+    .main__profile {
       width: 600px;
       height: 840px;
       background-color: #fff;
       padding:15px 25px;
       position: relative;
-      .main-ap__profile__form{
+      &--form{
         text-align: center;
         width: 100%;
         background-position: center;
         background-size: cover;
         background-color:#fff;
 
-        .main-ap__profile__header{
-           font-size: 24px;
-           font-weight:bold;
-           padding: 10px 24px;
-           border: solid 1px;
-           border-color:#C0C0C0;
-         }
+      .main__profile--header{
+        font-size: 24px;
+        font-weight:bold;
+        padding: 10px 24px;
+        border: solid 1px;
+        border-color:#C0C0C0;
+      }
         }
-      
-         .main-ap__profile__detail{
-           
+         &--detail{
+           margin:0px;
          }
-         .main-ap__profile__name{
+         &__name{
            height: 25px;
            padding: 10px 24px;
            text-align: center;
            margin: 2px auto;
            font-size: 24px;
-           background-image: white;
-           
-           
-           
+           background-image: white; 
          }
-         .main-ap__profile__name--box{
+          &--box{
             padding: 10px 24px;
-            height: 120px;
-           
+            height: 120px; 
          }
-         .main-ap__profile__name--img{
-            text-align: center;
-            width: 100%;
+            &--img{
+             text-align: center;
+             width: 100%;
+            }
+         &__name--nickname{
+           padding: 10px 24px;
+           height: 20px;
+           width: 120px;
+           margin:0 auto;
+           margin-bottom: 15px;
+           text-align: center;
+           font-size: 24px;
+           border-bottom:double;
+           border-color:#C0C0C0;
+           
            }
-            .main-ap__profile__name--nickname{
-              padding: 10px 24px;
-              height: 20px;
-              width: 120px;
-              margin:0 auto;
-              margin-bottom: 15px;
-              text-align: center;
-              font-size: 24px;
-              border-bottom:double;
-              border-color:#C0C0C0;
-              
-              }
-              .main-ap__profile__name--message{
-                margin-top:2px;
-                padding: 10px 24px;
-                height: 400px;
-                border: solid 1px;
-                border-color:#C0C0C0;
-                
+          &__name--message{
+            margin-top:2px;
+            padding: 10px 24px;
+            height: 400px;
+            border: solid 1px;
+            border-color:#C0C0C0;
+             
           }
-          .main-ap__form-group{
-            margin-top:20px;
+          .main__form-edit{
+            margin-top:45px;
             border: solid 1px;
             height: 25px;
-            padding: 15px 24px 10px;
+            padding: 15px 24px 15px;
             text-align: center;
             border-color:#C0C0C0;
             font-size:20px;
