@@ -3,12 +3,12 @@ class ProductsController < ApplicationController
   end
 
   def new
-    if user_signed_in?
+    # if user_signed_in?   #一旦バリデーション外し中
       @product = Product.new
       @product.images.new
-    else
-      redirect_to root_path
-    end
+    # else
+      # redirect_to root_path
+    # end
   end
 
   def create
