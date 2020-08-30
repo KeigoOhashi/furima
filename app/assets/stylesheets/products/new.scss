@@ -1,13 +1,12 @@
 @mixin icon{
-  width: 32px;
-  height: 19px;
-  text-align: center;
+  background: #3ccace;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
   font-size: 12px;
-  margin-left: 8px;
-  color: white;
-  background-color: #3CCACE;
-  font-weight: bold;
-  border-radius: 3px;
+  display: inline-block;
+  
 }
 @mixin form{
   font-size: 14px;
@@ -54,13 +53,12 @@
   .new__main{
     padding: 5 45px;
     margin: 0 auto;
-    height: 1400px;
-
+  
     &__content{ 
       width: 700px;
       background-color: #fff;
       margin: 0 auto;      
-      padding:10px 20px;
+      padding:25px 20px;
 
       &__brock{
         width: 700px;
@@ -68,8 +66,9 @@
         &__top{
           font-size: 14px;
           text-align: left;
-          margin:10px;
+          margin-top:25px;
           display: flex;
+          margin-left:40px;
           .head__icon{
             @include icon;
           }
@@ -77,11 +76,13 @@
         
           &__area{
            background-color: #fff;
-           padding: 15px 50px ;
+           padding: 15px 45px;
            border: 2px double #dedede;
-           margin-bottom: 35px;
+           margin:10px 35px 35px 35px;
+           text-align: center;
   
             .photo__space{
+              margin-top:5px;
               display: flex;
               justify-content:space-between;
               
@@ -222,26 +223,90 @@
             @include two_color;
           }
         }
-
+        
         .price{
           margin:0 auto;
           &--top{
             font-size: 14px;
-            margin:10px;
-            margin-bottom: 15px;
+            margin:10px 0 14px 300px;
             display: flex;
-            margin-left:300px;
             .head__icon{
               @include icon;
             } 
           }
           &__form{
             height: 55px; 
-            margin: 10px 30px 10px 300px; 
+            margin: 10px 30px 45px 300px; 
             @include two_color;
           }
         }
+      .purchase{
+        margin:0 auto;
+        
+      
+        .purchase__button {
+          margin:0 auto 30px;
+          background-color: red;
+          border-radius: 5px;
+          height: 55px;
+          width:250px;
+          
+          
+          //@include two_color;
+          margin-top:50px;
+          .purchase__button__form{
+            font-size:20px;
+            color:white;
+            font-weight:bold;
+            text-align:center; 
+            //top:10px;
+            display: inline-block;
+            margin-top:19px;
+            margin-left:87px;
+          }
+        }
+      } 
+      p{
+        font-size:6px;
+        text-align: center;
+        line-height: 16px;
+      } 
+
       }
     }
   }
 }
+
+  .single-footer__a{
+    width: 456px;
+    height: 150px;
+    margin: 0 auto;
+    //right: 0;
+    //bottom: 10px;
+    //left: 0;
+    z-index: 1;
+    padding: 80px 0 20px;
+    text-align: center;
+    
+    & li{
+      display: inline-block;
+      width: 148px;
+      font-size: 13px;
+    }
+    
+    .header__simbol__bottom{
+      width:100%;
+      margin:25px;
+      left: 30px;
+    }
+    p{
+      margin: 8px 0 ;
+      font-size: 13px;
+    }
+    hr {
+      border-color:#dedede;   
+      width: 700px; 
+      text-align: center; 
+      border-style:thin;  
+    }
+  }

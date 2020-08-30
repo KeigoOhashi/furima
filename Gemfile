@@ -79,4 +79,5 @@ gem 'carrierwave'
 gem 'jquery-rails'
 gem 'devise'
 gem 'fog-aws'
-gem 'ransack'
+gem 'ancestry'
+

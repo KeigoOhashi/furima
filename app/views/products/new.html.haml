@@ -10,6 +10,7 @@
           .head__icon
             必須  
         .new__main__content__brock__area
+          ドラッグ＆ドロップで写真をアップロード
           .photo__space 
             .photo__space__photo--1
             .photo__space__photo--2
@@ -66,6 +67,32 @@
             %h2 価格
             .head__icon
               必須
-          .price__form                               
-=render "purchase";
-=render "footer"; 
+          .price__form  
+          %hr
+        .purchase
+          .purchase__button
+            .purchase__button__form
+              出品する
+        %p
+          禁止されている行為および出品物を必ずご確認ください。
+          %br
+          偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。
+          %br
+          また、出品をもちまして加盟店規約に同意したことになります。
+    %footer.single-footer__a
+      %nav
+        %ul.clearfix
+          %li
+            = link_to "プライバシーポリシー", "#"
+          %li
+            = link_to "フリマ 利用規約", "#"
+          %li
+            = link_to "特定商取引に関する表記", "#"
+          .header__simbol__bottom
+        =image_tag "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg", width:'100',height:'40'
+      %p
+        %small 
+          © FURIMA, Inc. 
+                         
+//=render "purchase";
+//=render "footer"; 

@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   end
   root 'products#index'
 
-end
-  resources :products, only: [:index,:show,:create]
+  resources :products, only: [:index,:new,:show,:create]
 
+end
+  
   resources :users, only: [:show, :edit, :update]do
     member do
       get 'profile'
