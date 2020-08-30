@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2020_08_22_042529) do
     t.string "shipping_area"
     t.integer "shipping_days"
     t.bigint "user_id", null: false
+    t.integer "buyer_id"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name"

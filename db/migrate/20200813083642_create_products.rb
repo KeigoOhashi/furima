@@ -11,6 +11,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :shipping_days
       t.references :user, type: :bigint,null:false, foreign_key: true
       # t.references :category,null:false, foreign_key: true    #categoryテーブルが出来てからadd_columで追加する
+      t.integer :buyer_id
       t.timestamps
     end
   end

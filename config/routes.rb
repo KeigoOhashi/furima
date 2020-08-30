@@ -11,8 +11,11 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root 'products#index'
+
   resources :products, only: [:index,:new,:show,:create]
 
+end
+  
   resources :users, only: [:show, :edit, :update]do
     member do
       get 'profile'
@@ -28,3 +31,4 @@ Rails.application.routes.draw do
     ##resources :searches, only: [:index,:show]
     ##
     end
+
