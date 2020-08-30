@@ -1,0 +1,304 @@
+@import "mixin";
+.likes{
+  @include header-item;
+}
+
+.notification{
+  @include header-item;
+}
+
+.todo{
+  @include header-item;
+}
+
+.mypage{
+  @include header-item;  
+}
+
+.header__in{
+  background-color: rgb(255, 255, 255);
+  box-shadow:0px 2px 4px rgba(0, 0, 0, 0.18);
+  position: relative;
+  z-index: 3;
+  &__contents{
+    width: 1020px;
+    margin: 0px auto;
+    padding: 20px 0px 0px;
+    &__top{
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      &__image{
+        margin-top:5px;
+      }
+    }
+  }
+}
+      .header__in__contents__top__form{
+        position: relative;
+        width: 100%;
+        display: flex;
+        .search__box__input{
+          width: 820px;
+          height: 34px;
+          padding: 0 0 0 10px;
+          margin-left:15px;
+          margin-top:5px;
+        }
+        .button_to{
+          position: relative;
+          width: 37px;
+          height: 37px;
+          background-color: #3CCACE; 
+          margin-top:5px;
+        }
+      }
+      .search__icon{
+        position: absolute;
+        top:36px;
+        right: 205px;
+        border: 2px;
+      }  
+      
+    .header__in__contents__below{
+      height: 55px;
+      display: flex;
+      padding-top:15px;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      
+      &__search{
+        display: flex;
+        margin-left: -3px;
+        height: 44px;
+        line-height:44px;
+        &__category{
+          @include button;
+          padding-right:10px;
+          transition: all 0.3s ease-out 0s;
+          display: flex;
+          &:hover .search__category{
+            color:#3ccace;
+          }
+        }
+      }
+    }
+          
+          // プルダウンメニュー（カテゴリ）
+          > ul {
+            @include nav-ul;
+            > li {
+              @include nav-li;
+            }
+          }
+          .list--name {
+            @include nav-li--name;
+          }
+          .level1, .level2 {
+            @include nav-level--common;
+            position: absolute;
+            .list--name {
+              @include nav-list--name;
+            }
+          }
+          .level1 {
+            display: none;
+            top: 100%;
+            left: 0;
+            .active {
+              @include nav-level--active;
+            }
+          }
+          .level2 {
+            top: 0;
+            left: 100%;
+            height: 703px;
+            background: White;
+            .active {
+              color: black;
+              background: gley;
+            }
+            .list--name {
+              line-height: 2.0;
+            }
+          }
+       
+       .header__in__contents__below__search__brand{
+          @include button;
+          padding-left:10px;
+          transition: all 0.3s ease-out 0s;
+          &:hover .search__brands{
+            color:#3ccace;
+          }
+        }
+          // プルダウンメニュー（ブランド）
+          ul.level1--category {
+            @include nav-ul;
+            display: none;
+            .active {
+              @include nav-level--active;
+            }
+            li.parent__list--category {
+              @include nav-li;
+            }
+          }
+          .list__name--category {
+            @include nav-li--name;
+          }
+          .level1--category {
+            @include nav-level--common;
+            top: 100%;
+            left: 0;
+            .list__name--category {
+              @include nav-list--name;
+            }
+          }
+        
+      
+
+      //&__registration{
+      //  display: flex;
+      //  &__new{
+      //    text-align: center;
+      //    @include button;
+      //    margin-right:10px;
+      //  }
+      //  &__login{
+      //    text-align: center;
+      //    @include button;
+      //    width:76.75px;
+      //  }
+      //}
+      .header__in__contents__below__personal{
+        display: flex;
+        position: relative;
+        padding-top: 20px ;
+        &__likes{
+          @include login-list;
+          &:hover .likes{
+            color:#3ccace;
+          }
+          &:hover .login__icon{
+            color:#3ccace;
+          }
+        }
+        &__notification{
+          @include login-list;
+          &:hover .notification{
+            color:#3ccace;
+          }
+          &:hover .login__icon{
+            color:#3ccace;
+          }
+        }
+        &__todo{
+          @include login-list;
+          &:hover .todo{
+            color:#3ccace;
+          }
+          &:hover .login__icon{
+            color:#3ccace;
+          }
+        }
+        &__mypage{
+          @include login-list;
+          &:hover .mypage{
+            color:#3ccace;
+          }
+          &:hover .login__icon{
+            color:#3ccace;
+          }
+        }
+      }
+    
+  
+
+//.form{
+//  background-color: rgb(245, 245, 245);
+//  font-size: 16px;
+//  height: 40px;
+//  line-height: 1.4em;
+//  position: relative;
+//  width: 1030px;
+//  -webkit-appearance: none;
+//  border-width: 1px;
+//  border-style: solid;
+//  border-color: rgb(204, 204, 204);
+//  border-image: initial;
+//  border-radius: 4px;
+//  outline: none;
+//  padding: 0px 50px 0px 10px;
+//  transition: all 0.3s ease-out 0s;
+//}
+
+
+//.search-button{
+//  display: none;
+//}
+
+
+
+.icon{
+  max-width: 100%;
+  max-height: 100%;
+  height: 12px;
+  margin-right: 4px;
+  color:black;
+  line-height: 44px;
+}
+
+//.login__icon{
+//  max-width: 100%;
+//  max-height: 100%;
+//  height: 12px;
+//  margin-right: 4px;
+//  color:black;
+//
+//}
+
+//.search__category{
+//  @include header-item;
+//  font-weight: 600;
+//  line-height: 44px;
+//  margin-left: 4px;
+//}
+
+//.search__brands{
+//  @include header-item;
+//  font-weight: 600;
+//}
+
+//.registration{
+//  color:White;
+//  display: block;
+//  font-size: 14px;
+//  border-width: 1px;
+//  border-style: solid;
+//  //border-color:$header-menu-red;
+//  line-height: 14px;
+//  border-radius: 4px;
+//  padding: 8px 10px;
+//  text-decoration: none;
+//}
+
+//.login{
+//  background-color:White;
+//  color:#3ccace;
+//  display: block;
+//  font-size: 14px;
+//  border-width: 1px;
+//  border-style: solid;
+//  border-color:#3ccace;
+//  line-height: 14px;
+//  border-radius: 4px;
+//  padding: 8px 10px;
+//  transition: all 0.3s ease-out 0s;
+//  text-decoration: none;
+//  &:hover{
+//    background-color:#3ccace;
+//    color:White;
+//  }
+//}
+//
+//
+//

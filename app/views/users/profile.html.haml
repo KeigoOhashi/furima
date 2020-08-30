@@ -1,0 +1,31 @@
+=render "devise/home/header_login"
+//- breadcrumb :profile
+//=render "layouts/breadcrumbs"
+=render "mypage_side"
+.mypage 
+  %main.mypage__profile
+    .main__profile
+      .main__profile--form
+        //=image_tag "#";
+        .main__profile--header
+          %h1 プロフィール
+        .main__profile--detail
+          //= form_for @user,url:profile_update_user_path(current_user), method: :patch,html:{class:"personal-input-form" } do |form|
+        .main__profile__name 
+        .main__profile__name--box
+          .main__profile__name--img
+            = image_tag "https://static.mercdn.net/images/member_photo_noimage_thumb.png", height: "100", width: "100", class: "user-img"
+        .main__profile__name--nickname
+          //= form_with url: "profile_uses_pat" do |form|
+          //:nickname
+        .main__profile__name--message
+          = form_with url: "profile_uses_path" do |form|
+            フォーム内容
+          //= form.text_area :introduction,class:'text-introduction',placeholder:"例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪" 
+        .main__form-edit
+          変更する
+          //= form.submit "変更する", class: "btn-default btn-red"
+=render "products/middle__dl"
+=render "products/footer"
+=render "products/purchase"
+

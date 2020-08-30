@@ -127,9 +127,10 @@
             最大3%でお得に出品&amp;購入！
     %section.middle__dl
       = image_tag  "http://furima.tokyo/assets/bg-topMiddleDl-pict-5042a3aa7eef6dd93330080028e3a781daf47c390c00a4fb5d7e7b06caae68c9.jpg",width:'100%',height:'400'
-      .middle__dl__inner
-        %h2.middle__dl__subtitle 会員数日本一位
-        %p.middle__dl__text
+
+      .middle__dl--inner
+        %h2.middle__dl--subtitle 会員数日本一位
+        %p.middle__dl--text
           FURIMAは、フリマアプリで最も人気。
           %br/
           出品・購入回数も業界最多です！
@@ -337,7 +338,9 @@
           © FURIMA   
       .purchase__btn
         = link_to (new_product_path) do 
+
           %span.purchase__btn__text 
             出品する
           .purchase__btn__icon
             = image_tag "http://furima.tokyo/assets/icon_camera-968c5ebaa05319bf1e2ad7508f852dd712504a4d26a1930d8bd87ec03ebcc37a.svg",width:'55',height:'55'
+

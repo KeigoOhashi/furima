@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'products/index'
+  get 'users/profile'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     # omniauth_callbacks: 'users/omniauth_callbacks',
@@ -9,7 +11,23 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root 'products#index'
-  resources :products, only: [:index, :show, :new] 
-    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
+
 end
+  resources :products, only: [:index,:show,:create]
+
+  resources :users, only: [:show, :edit, :update]do
+    member do
+      get 'profile'
+      patch 'profile_update'
+      get 'logout'
+    end
+  end
+    ##collection do
+    ##  get 'ready'
+    ##end
+    ##end
+    ##namespace :products do
+    ##resources :searches, only: [:index,:show]
+    ##
+    end
+
