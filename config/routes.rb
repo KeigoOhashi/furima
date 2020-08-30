@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root 'products#index'
+
+end
   resources :products, only: [:index,:show,:create]
 
   resources :users, only: [:show, :edit, :update]do
@@ -28,3 +30,4 @@ Rails.application.routes.draw do
     ##resources :searches, only: [:index,:show]
     ##
     end
+
