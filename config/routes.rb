@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index,:new,:show,:create]
 
-end
+
   
   resources :users, only: [:show, :edit, :update]do
     member do
@@ -30,5 +30,6 @@ end
     ##namespace :products do
     ##resources :searches, only: [:index,:show]
     ##
-    end
+    # end
 
+  end
