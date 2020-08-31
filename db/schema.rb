@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_055553) do
     t.string "city", null: false
     t.string "address", null: false
     t.string "apartment"
-    t.string "phone_number"
+    t.string "phone_number", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(version: 2020_08_31_055553) do
     t.string "shipping_area"
     t.integer "shipping_days"
     t.bigint "user_id", null: false
-    t.integer "buyer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name"
