@@ -17,8 +17,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       params[:user][:password] = pass
       params[:user][:password_confirmation] = pass
     end
-    # params[:user][:birthday] = params[:birthday]
-    # binding.pry
     @user = User.new(sign_up_params)
     unless @user.valid?
       flash.now[:alert] = @user.errors.full_messages
@@ -62,8 +60,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       )
     end
     @creditcard = Creditcard.new(creditcard_params)
-    # @creditcard[:customer_id]=customer.id
-    # @creditcard[:card_id]=customer.default_card
     unless @creditcard.valid?
       flash.now[:alert] = @creditcard.errors.full_messages
       # render :new_credit_card and return

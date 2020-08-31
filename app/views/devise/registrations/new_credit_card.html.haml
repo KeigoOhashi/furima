@@ -55,7 +55,6 @@
         %br
         = f.select :card_month, options_for_select(["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]), {}, {class: "form-group__input--half"}
         = f.label :月, class: "form-group__card--year-and-month"
-        -# = f.select :card_year, options_for_select(["20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]), {}, {class: "form-group__input--half"}
         = f.select :card_year, options_for_select((2020..2030)), {}, {class: "form-group__input--half"}
         = f.label :年, class: "form-group__card--year-and-month"
       .form-group
