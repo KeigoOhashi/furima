@@ -40,48 +40,51 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
     @user.build_address(@address.attributes)
     session["address"] = @address.attributes
-    # @creditcard = @user.build_creditcard
-    # render :new_credit_card
+    @creditcard = @user.build_creditcard
+    render :new_credit_card
   end
 
-  # def create_creditcard
-  #   @user = User.new(session["devise.regist_data"]["user"])
-  #   @address = Address.new(session["address"])
-  #   Payjp.api_key = Rails.application.secrets.payjp_access_key
-  #   if params['payjpToken'].blank?
-  #     redirect_to action: "new"
-  #   else
-  #     # 顧客情報をPAY.JPに登録。
-  #     customer = Payjp::Customer.create(
-  #       description: 'test', 
-  #       email: @user.email,
-  #       card: params['payjpToken'], 
-  #     )
-  #   end
-  #   @creditcard = Creditcard.new(creditcard_params)
-  #   @creditcard[:customer_id]=customer.id
-  #   @creditcard[:card_id]=customer.default_card
-  #   unless @creditcard.valid?
-  #     flash.now[:alert] = @creditcard.errors.full_messages
-  #     render :new_credit_card and return
-  #   end
-  #   @user.build_address(@address.attributes)
-  #   @user.build_creditcard(@creditcard.attributes)
-  #   if @user.save
-  #     sign_in(:user, @user)
-  #   else
-  #     render :new
-  #   end
-  # end
+  def new_credit_card
+  end
+
+  def create_creditcard
+    @user = User.new(session["devise.regist_data"]["user"])
+    @address = Address.new(session["address"])
+    Payjp.api_key = Rails.application.secrets.payjp_access_key
+    if params['payjpToken'].blank?
+      redirect_to action: "new"
+    else
+      # 顧客情報をPAY.JPに登録。
+      customer = Payjp::Customer.create(
+        description: 'test', 
+        email: @user.email,
+        card: params['payjpToken'], 
+      )
+    end
+    @creditcard = Creditcard.new(creditcard_params)
+    # @creditcard[:customer_id]=customer.id
+    # @creditcard[:card_id]=customer.default_card
+    unless @creditcard.valid?
+      flash.now[:alert] = @creditcard.errors.full_messages
+      # render :new_credit_card and return
+    end
+    @user.build_address(@address.attributes)
+    @user.build_creditcard(@creditcard.attributes)
+    if @user.save
+      sign_in(:user, @user)
+    else
+      render :new
+    end
+  end
 
   protected
   def address_params
     params.require(:address).permit(:address,:postal_code, :prefecture,:city,:apartment)
   end
 
-  # def creditcard_params
-  #   params.require(:creditcard).permit(:card_number,:card_year, :card_month, :card_pass,:card_company)
-  # end
+  def creditcard_params
+    params.require(:creditcard).permit(:card_number,:card_year, :card_month, :card_pass,:card_company)
+  end
 
 
 

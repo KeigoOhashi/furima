@@ -80,4 +80,4 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'fog-aws'
 gem 'ancestry'
-
+gem 'payjp'
