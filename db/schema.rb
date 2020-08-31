@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_22_042529) do
+ActiveRecord::Schema.define(version: 2020_08_31_055553) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "postal_code", null: false
@@ -18,11 +18,33 @@ ActiveRecord::Schema.define(version: 2020_08_22_042529) do
     t.string "city", null: false
     t.string "address", null: false
     t.string "apartment"
-    t.string "phone_number", null: false
+    t.string "phone_number"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "ancestry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ancestry"], name: "index_categories_on_ancestry"
+  end
+
+  create_table "creditcards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "card_company", null: false
+    t.string "card_number", null: false
+    t.integer "card_year", null: false
+    t.integer "card_month", null: false
+    t.integer "card_pass", null: false
+    t.bigint "user_id", null: false
+    t.string "customer_id", null: false
+    t.string "card_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_creditcards_on_user_id"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -44,7 +66,6 @@ ActiveRecord::Schema.define(version: 2020_08_22_042529) do
     t.integer "shipping_days"
     t.bigint "user_id", null: false
     t.integer "buyer_id"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name"
@@ -71,6 +92,7 @@ ActiveRecord::Schema.define(version: 2020_08_22_042529) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "creditcards", "users"
   add_foreign_key "images", "products"
   add_foreign_key "products", "users"
 end
