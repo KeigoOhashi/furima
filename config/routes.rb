@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
   root 'products#index'
 
-  resources :products, only: [:index,:new,:show,:create]
+  resources :products, only: [:index,:new,:show,:create]do
 
 
   
@@ -32,6 +32,6 @@ Rails.application.routes.draw do
     ##namespace :products do
     ##resources :searches, only: [:index,:show]
     ##
-    # end
 
-  end
+    ##end
+enｄ
