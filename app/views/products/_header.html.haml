@@ -18,57 +18,28 @@
           %ul.result__lists
       .lists
         %ul.lists__left
-          %li.lists__left__item--category
+          %li.categories
             =link_to("#") do 
               カテゴリー
-            .tree__display
-              %ul.categoryTree
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    レディース
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    メンズ
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    ベビー・キッズ
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    インテリア・住まい・小物
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    本・音楽・ゲーム
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    おもちゃ・ホビー・グッズ
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    コスメ・香水・美容
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    家電・スマホ・カメラ
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    スポーツ・レジャー
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    ハンドメイド
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    チケット
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    自動車・オートバイ
-                %li.categoryTree--item
-                  =link_to("#") do 
-                    その他
+              %ul.category__parent
+                - @parents.each do |parent|
+                  %li.parent__list
+                    = link_to parent.name
+                    %ul.category__child
+                      - @children.each do |child|
+                        %li.child__list
+                          =link_to child.name
+                          %ul.category__grandchild
+                            - children.each do |grandchild|
+                              %li.grandchild__list
+                                = link_to grandchild.name
           %li.lists__left__item--bland
-            =link_to("#") do  
+            =link_to('#')do  
               ブランド
             %ul.brands__pulldown.display_none
         %ul.lists__right
           %li.lists__right__item--login
-            =link_to "#" do 
+            =link_t'#'do    
               ログイン
           %li.lists__right__item--new
             =link_to'#' do

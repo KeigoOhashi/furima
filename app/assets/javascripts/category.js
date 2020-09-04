@@ -7,14 +7,16 @@
 //});
 $(function() {
   $(".categories").hover(function() {
-  $("ul.category__parent").toggle();
+  $("ul.category__parent").slideDown(500);
   });
   $(".categories li ul").hide();
-  $(".category__parent li").hover(function() {
-      $(">ul:not(:animated)", this).stop(true, true).slideDown("fast");
+  $(".categories li ").hover(function() {
+      $(">ul:not(:animated)", this).stop(true, true).slideDown(500);
       $(">a", this).addClass("active");
   }, function() {
-      $(">ul:not(:animated)", this).stop(true, true).slideUp("fast");
+      $(">ul:not(:animated)", this).stop(true, true).slideUp(500);
       $(">a", this).removeClass("active");
-});
-});
+
+  });
+  });
+  
