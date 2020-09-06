@@ -34,4 +34,5 @@ Rails.application.routes.draw do
     ##
 
     ##end
-enｄ
+end
+end
