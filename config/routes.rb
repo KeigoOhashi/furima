@@ -14,17 +14,17 @@ Rails.application.routes.draw do
   end
   root 'products#index'
 
-  resources :products, only: [:index,:new,:show,:create]do
+  resources :products, only: [:index,:new,:show,:create]
 
 
   
-  resources :users, only: [:show, :edit, :update]do
-    member do
-      get 'profile'
-      patch 'profile_update'
-      get 'logout'
+    resources :users, only: [:show, :edit, :update]do
+      member do
+        get 'profile'
+        patch 'profile_update'
+        get 'logout'
+      end
     end
-  end
     ##collection do
     ##  get 'ready'
     ##end
@@ -34,5 +34,5 @@ Rails.application.routes.draw do
     ##
 
     ##end
-end
+
 end
