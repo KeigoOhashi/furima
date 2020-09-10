@@ -70,6 +70,8 @@
           -if user_signed_in?
             %li.lists__right__item--login     
               =link_to "マイページ", user_path(current_user.id),class:"mypage"
+            %li.lists__right__item--login   
+              = link_to "ログアウト", destroy_user_session_path, method: :delete,  class: 'mypage'
           -else 
             %li.lists__right__item--login
               =link_to(new_user_session_path) do 
