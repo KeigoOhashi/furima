@@ -16,9 +16,6 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index,:new,:show,:create]do
 
-
-  
-
 end
   resources :users, only: [:show, :edit, :update]do
     member do
