@@ -65,8 +65,11 @@ ActiveRecord::Schema.define(version: 2020_08_31_055553) do
     t.string "shipping_area"
     t.integer "shipping_days"
     t.bigint "user_id", null: false
+    t.bigint "category_id", null: false
+    t.integer "buyer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["name"], name: "index_products_on_name"
     t.index ["price"], name: "index_products_on_price"
     t.index ["user_id"], name: "index_products_on_user_id"
@@ -93,5 +96,6 @@ ActiveRecord::Schema.define(version: 2020_08_31_055553) do
   add_foreign_key "addresses", "users"
   add_foreign_key "creditcards", "users"
   add_foreign_key "images", "products"
+  add_foreign_key "products", "categories"
   add_foreign_key "products", "users"
 end
