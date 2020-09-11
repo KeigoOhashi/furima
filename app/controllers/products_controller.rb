@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    # binding.pry
+    @parents = Category.where(ancestry:nil)
   end
 
   def new
