@@ -21,18 +21,18 @@
           %li.lists__left__item--category
             =link_to("#") do 
               カテゴリー
-              %ul.category__parent
-                - Category.roots.each do |parent|
-                  %li.parent__list
-                    = link_to parent.name
-                    %ul.category__child
-                      - parent.children.each do |child|
-                        %li.child__list
-                          =link_to child.name
-                          %ul.category__grandchild
-                            - child.children.each do |grandchild|
-                              %li.grandchild__list
-                                = link_to grandchild.name
+              //%ul.category__parent
+              //  - Category.roots.each do |parent|
+              //    %li.parent__list
+              //      = link_to parent.name
+              //      %ul.category__child
+              //        - parent.children.each do |child|
+              //          %li.child__list
+              //            =link_to child.name
+              //            %ul.category__grandchild
+              //              - child.children.each do |grandchild|
+              //                %li.grandchild__list
+              //                  = link_to grandchild.name
           %li.lists__left__item--bland
             =link_to("#") do  
               ブランド
@@ -40,7 +40,7 @@
         %ul.lists__right
           -if user_signed_in?
             %li.lists__right__item--login     
-              =link_to "マイページ", profile_user_path(current_user.id),class:"mypage"
+              =link_to "マイページ", user_path(current_user.id),class:"mypage"
           -else 
             %li.lists__right__item--login
               =link_to(new_user_session_path) do 
@@ -71,8 +71,7 @@
       %ul.pic__lists
         %li.pic__lists__left
           .pic__lists__left__pict
-            %span.number1 
-              %p 1
+            %span.number1 1
             = image_tag"http://furima.tokyo/assets/pict-reason-01-77b860b45f32923029756050dafc0f6df01a36675414b0f26f127c64a53baaea.jpg",width:300,height:'300'
           %h3.pic__lists__left__text
             %span 3分
@@ -81,8 +80,7 @@
             スマホで入力するだけで簡単に出品できる！
         %li.pic__lists__center
           .pic__lists__center__pict
-            %span.number2 
-              %p 2
+            %span.number2 2
             = image_tag "http://furima.tokyo/assets/pict-reason-02-3471b96ea7b52654510992e57dc05af07926de0836200059b7fa4ead05ee4d56.jpg",width:300,height:'300'
           %h3.pic__lists__center__text
             %span シンプル
@@ -91,8 +89,7 @@
             めんどくさい入力は必要なく、検索も購入もスムーズ！
         %li.pic__lists__right
           .pic__lists__right__pict
-            %span.number3
-              %p 3
+            %span.number3 3
             = image_tag "http://furima.tokyo/assets/pict-reason-03-1e3c743f3ba3db8c43987d2e257916a615aa8fc59c02bbc116f041a5580ec28f.jpg",width:300,height:'300'
           %h3.pic__lists__right__text
             手数料
@@ -153,7 +150,7 @@
                 %h3.name ee
                 .details
                   %ul
-                    %li 10000円
+                    %li 1000円
                     %li
                       %i.fa.fa-star
                       0
@@ -212,7 +209,7 @@
                 %h3.name ee
                 .details
                   %ul
-                    %li 10000円
+                    %li 1000円
                     %li
                       %i.fa.fa-star
                       0
