@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'products/buy'
   get 'products/index'
   get 'users/profile'
   devise_for :users, controllers: {
@@ -23,6 +24,16 @@ Rails.application.routes.draw do
         get 'logout'
       end
     end
+  resources :products do
+    member do
+      post 'purchase'
+      get 'purchased'
+      get 'buy'
+      get 'reserve'
+      patch 'reserved'
+      patch 'reserve_cancel'
+    end
+  end
     ##collection do
     ##  get 'ready'
     ##end
