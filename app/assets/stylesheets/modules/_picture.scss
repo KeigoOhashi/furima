@@ -26,11 +26,12 @@
   .pic__lists{
     display: flex;
     
+    
     &__left{
       text-align: left;
       flex-direction: column;
       align-items: center; 
-      margin: 16px 5% 0 10%;   
+      margin: 16px 5% 0 12%;   
     &__pict{
       position: relative;
       margin-bottom: 20px;
