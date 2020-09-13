@@ -11,7 +11,6 @@
           .head__icon
             必須  
         .new__main__content__brock__area
-
           .photo__space 
             .photo__space__photo--1
             .photo__space__photo--2
@@ -37,10 +36,21 @@
             %h2 カテゴリー
             .head__icon
               必須  
-              -# %form.category__form{id: "category__box--parent"}
+            .select--wrap{id: "category__box--parent"}
+              //%form.category__form{id: "category__box--parent"}
               -# = f.collection_select :category_id, Category.all.limit(13), :id, :name,{prompt:"---"},{class:"select--wrap-cat1__default-category1", id: "parent_form"}
-
-
+              = f.collection_select :root_category_id, @category, :id, :name,{prompt: "---"}, {class: "contents__main__detail__right__select__form", id: "category_select", required: true}
+              = icon('fas', 'angle-down', class: "contents__main__detail__right__select--icon")
+              =f.collection_select :category_id, @category_parent_array, :id, :name,{ include_blank: "選択してください"},class:"select_field"
+              .select-wrap
+                    =f.select :L_category_id, Item.L_category_ids.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
+                  .select-wrap
+                    =f.select :M_category_id, Item.M_category_ids.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
+                  .select-wrap
+                    =f.select :S_category_id, Item.S_category_ids.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
         .brand  
           .brand--top       
             %h2 ブランド  

@@ -26,6 +26,8 @@ Rails.application.routes.draw do
     end
   resources :products do
     member do
+      get 'get_category_children', defaults: { fomat: 'json'}
+      get 'get_category_grandchildren', defaults: { fomat: 'json'}
       post 'purchase'
       get 'purchased'
       get 'buy'
@@ -33,6 +35,7 @@ Rails.application.routes.draw do
       patch 'reserved'
       patch 'reserve_cancel'
     end
+    
   end
     ##collection do
     ##  get 'ready'

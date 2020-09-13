@@ -23,6 +23,12 @@ class Product < ApplicationRecord
   validates :categories,presence: true,numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 13}
 
   mount_uploader :image, ImageUploader
+end
 
+def get_category_children
+  @category_children = Category.find("#{params[:parent_id]}").children
+end
 
+def get_category_grandchildren
+  @category_grandchildren = Category.find("#{params[:child_id]}").children
 end
