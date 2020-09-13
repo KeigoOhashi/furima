@@ -1,13 +1,13 @@
 //商品購入ページ//
 =render"products/simbol"
-.buy__top
+.body
   %main.buy__main 
     //=form_tag(action: :purchase, method: :post) do
-    .buy__item-container
-      %h2.buy__item-head 
+    .buy__main__item--container
+      %h2.buy__main__item--head 
         購入内容の確認
-      %section.buy__item__content
-        .buy__item__content-inner
+      %section.buy__main__item__content
+        .buy__main__item__content-inner
           .buy__item
             .buy__item-box
               .buy__item-image
@@ -24,7 +24,7 @@
       %section.buy__content.buy-user-info
         .buy__content-inner
           %ul.buy__price-table
-            %li.buy__price-row.buy-you-pay.bold
+            %li.buy__price-row.buy-you-pay
             %li.buy__price-cell 
               支払い金額
             %li.buy__price-yen
@@ -33,12 +33,12 @@
           %section.buy__content.buy-user-info
         .buy__content-inner
           %h3 支払方法
-          .payment-content__creditcards__list
+          .payment__content__creditcards__list
             %figure
               = image_tag "#{@card_src}",alt: @card_brand, id: "card_image"
-            .payment-content__creditcards__list--number
+            .payment__content__creditcards__list-number
               //= "**** **** **** " + @creditcard_information.last4
-            .payment-content__creditcards__list--information
+            .payment__content__creditcards__list-information
               //- exp_month = @creditcard_information.exp_month.to_s
               //- exp_year = @creditcard_information.exp_year.to_s.slice(2,3)
               //= exp_month + " / " + exp_year
