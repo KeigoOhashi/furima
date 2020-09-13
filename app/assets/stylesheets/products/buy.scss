@@ -1,59 +1,77 @@
-.buy__top{
-  margin:0px;
-  padding: 0px;
+@mixin buy__content{
+  padding: 30px 16px;
+  height:100px;
+  border-top: 1px solid  #dedede;
+  color: #333;
+  h3{
+    font-size: 16px;
+    text-align: left;
+    font-weight: 600;
+  }
+}
+
+
+
+
+.body{
+  display: block;
+  overflow-x: hidden;
+  width:100%;
+  
   .buy__main {
-    display: block;
-      //=form_tag(action: :purchase, method: :post) do
-   .buy__item-container {
+    margin: 0px;
+    padding: 0px;
+
+//つなぎ事項 //=form_tag(action: :purchase, method: :post) do
+   &__item--container {
+    overflow-block:hidden;
      margin: 25px auto;
-     width: 600px;
-     height:900px;
+     width: 500px;
+     height:850px;
      background-color: #fff;
 // 購入内容の確認
-      .buy__item-head {
-        height:50px;
+      .buy__main__item--head {
+        height:35px;
         padding: 30px 16px;
         display: box;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 2;
         text-align: center;
         font-weight: 600;
       }
 
-     .buy__item__content{
+     .buy__main__item__content{
         text-align: center;
-        height: 140px;
+        height: 120px;
         border-top: 1px solid  #dedede;
-      .buy__item__content-inner{
+      &-inner{
 
         .buy__item {
-          height:120px;
+          height:100px;
           display: block;
           padding: 30px 14.5%;
           margin:0px;
           text-align: right;
        
-         .buy__item-box{
+         &-box{
           
-           .buy__item-image{
+           &-image{
              float: left;
              width: 95px;
-             height: 95px;
-              
+             height: 95px;   
           }
           }
         }
       }
            .buy__item-detail{
-            font-size: 15px;
-  //=@product.name           
-        
+             font-size: 15px;
+//紐付け事項//=@product.name           
             .buy__item-price{
               margin-top:50px;
               font-size: 20px;
               line-height: 1.5;
               font-weight: 600;
-         //= number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
+//紐付け事項//= number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
 //(税込)送料込み
               .item-shipping-fee{
                 display:block;
@@ -72,6 +90,7 @@
   .buy__content.buy-user-info {
     padding: 24px 12.5% 24px 12.5% ;
     .buy__content-inner{
+      @include buy__content;
 
     }
       .buy__price-table{
@@ -80,15 +99,15 @@
         //width: 100%;
   
       }
-        .buy__price-row.buy-you-pay.bold{
+        .buy__price-row.buy-you-pay{
           //display: table-row;
           //border-top: 1px solid #ccc;
         }//
-        //支払い金額
+ //支払い金額
         .buy__price-cell {
           display: table-cell;
           text-align: left;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
           color: #333;
         }
@@ -97,26 +116,18 @@
            float:right;
            font-size: 28px;
            font-weight: 600;
-        //= number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
+//紐付け事項 //= number_to_currency(@product.price,format: "%u%n",unit:"¥",precision: 0)
         }
 
   .buy__content.buy-user-info{
     padding: 24px 12.5% 12px 12.5% ;
      
- //支払方法
+//支払方法
 .buy__content-inner{
-  padding: 30px 16px;
-  height:120px;
-  border-top: 1px solid  #dedede;
-  color: #333;
-  h3{
-    font-size: 16px;
-    text-align: left;
-    font-weight: 600;
-  }
+  @include buy__content;
 }
 }
-    .payment-content__creditcards__list{
+    .payment__content__creditcards__list{
       float: left;
       margin:15px 0 0 15px;
       width: 180px;
@@ -124,43 +135,35 @@
       font-size: 12px;
       color: #333;
       font-weight:normal;
-      %figure{
+      figure{
         
       }
     
-      .payment-content__creditcards__list--number{
+      &-number{
       
-       //= "**** **** **** " + @creditcard_information.last4
+//紐付け事項//= "**** **** **** " + @creditcard_information.last4
 
-       .payment-content__creditcards__list--information{
+       &-information{
 
-         // xp_month = @creditcard_information.exp_month.to_s
-         //- exp_year = @creditcard_information.exp_year.to_s.slice(2,3)
-         //= exp_month + " / " + exp_year
+//// xp_month = @creditcard_information.exp_month.to_s
+////- exp_year = @creditcard_information.exp_year.to_s.slice(2,3)
+////= exp_month + " / " + exp_year
         }
       }
     }
 
    .buy-content.buy-user-info {
      margin: 0;
-     font-size: 14px;
-     font-weight: 700;
+     font-size: 13px;
+     font-weight: 600;
     }
 //配送先
   .buy-content-inner{
-    padding: 30px 16px;
-    height:180px;
-    border-top: 1px solid #dedede;
-    color: #333;
-    h3{
-      font-size: 16px;
-      text-align: left;
-      font-weight: 600;
-    }
+    @include buy__content;
          
     .buy-user-info-text {
       margin:10px 0 0 10px;
-      height:   100px;
+      height:   120px;
       font-size: 15px;
       color: #333;
       font-weight:normal;
@@ -190,79 +193,3 @@
   } 
 
 
-//img {
-//  vertical-align: middle;
-//}
-
-//.buy-user-info-fix {
-//  display: block;
-//  text-align: right;
-//  color: #0099e8;
-//  text-decoration: none;
-//  font-size: 14px;
-//  &:hover {
-//    text-decoration: underline;
-//    opacity: 0.5;
-//  }
-//  & span {
-//    vertical-align: middle;
-//  }
-//}
-
-//.buy-form p {
-//    margin: 8px 0 0;
-//    line-height: 1.5;
-//}
-
-
-//.arrow-right {
-//  vertical-align: middle;
-//  margin: 0 0 0 3px;
-//  font-size: 14px;
-//  &:hover {
-//    text-decoration: none;
-//  }
-//}
-
-//.item-shipping-fee {
-  //    display: inline-block;
-  //    font-size: 16px;
-  //}
-  
-  //.buy-accordion {
-  //  margin: 16px 0 0;
-  //  &.not-have {
-  //    background: #ccc;
-  //  }
-  //}
-  //
-  //.accrodion-toggle {
-  //  padding: 16px;
-  //  border: 1px solid #ccc;
-  //  font-size: 14px;
-  //}
-  //
-  //.btn-buy {
-//  margin: 16px 0 0;
-//  background: #888888;
-//  color: #fff;
-//  display: block;
-//  width: 100%;
-//  line-height: 48px;
-//  font-size: 14px;
-//}
-//.buy-user-info{
-//  padding: 32px 0;
-//  text-align: left;
-//}
-//.disabled-button{
-//  text-align: center;
-//  margin: 16px 0 0;
-//  background: #888888;
-//  color: #fff;
-//  display: block;
-//  width: 100%;
-//  font-size: 24px;
-//  line-height: 60px;
-//  cursor: not-allowed;
-//
