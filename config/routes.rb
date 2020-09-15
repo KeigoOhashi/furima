@@ -44,6 +44,4 @@ Rails.application.routes.draw do
     ##namespace :products do
     ##resources :searches, only: [:index,:show]
     ##
-
-    end
 end

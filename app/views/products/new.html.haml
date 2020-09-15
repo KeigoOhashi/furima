@@ -3,11 +3,37 @@
     =image_tag "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg", width:'150',height:'75'
 .main
   .new__main
-    .new__main__content
+    #image-box
+      #previews
       .new__main__content__brock
-        = form_for @product do |f|
-          .new__main__content__brock__top
-            写真（最大8枚まで掲載可能です）
+      = form_for @product do |f|
+        .new__main__content__brock__top
+          写真（最大8枚まで掲載可能です）
+          .head__icon
+            必須  
+          .dropbox
+            %label.dropbox__img
+              %p クリックしてファイルをアップロード
+              = f.fields_for :images do |image|
+                = image.file_field :product_image, class: 'js-file'
+        .itemName   
+          .itemName--top        
+            %h2 商品名
+            .head__icon
+              必須       
+          .itemName__form  
+          %div
+            = f.text_field :name, class:"products-name__text__field", placeholder: "商品名（必須 40文字まで)"
+        .detail   
+          .detail--top         
+            %h2 商品詳細 
+            = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+            .head__icon
+              必須       
+          %form.detail__form 
+        .category    
+          .category--top
+            %h2 カテゴリー
             .head__icon
               必須  
           .new__main__content__brock__area

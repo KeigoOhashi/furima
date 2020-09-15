@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
-    @category_parent_array = Category.where(ancestry:nil)
+    @parents = Category.where(ancestry:nil)
+    @products = Product.includes(:images).order('created_at DESC')
   end
 
   def new

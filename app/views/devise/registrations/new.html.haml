@@ -38,7 +38,7 @@
         .form-group
           = f.label :確認用パスワード
           %span.form-group__require 必須
-          = f.password_field :password_confirmation, required: true, placeholder: "アルファベットと数字を含む8〜128字",class:'form-group__input',id:"password"
+          = f.password_field :password_confirmation, placeholder: "アルファベットと数字を含む8〜128字",class:'form-group__input',id:"password"
           %p.form-group__info ※ 英字と数字の両方を含めて設定してください
           .form-password-revelation-toggle
             -# .checkbox-default
