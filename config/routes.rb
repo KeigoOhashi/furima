@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
   root 'products#index'
 
-  resources :products, only: [:index,:new,:show,:create]do
+ 
   
     resources :users, only: [:show, :edit, :update]do
       member do
@@ -24,8 +24,8 @@ Rails.application.routes.draw do
         get 'logout'
       end
     end
-  resources :products do
-    member do
+  resources :products ,only: [:index,:new,:show,:create]do
+    collection do
       get 'get_category_children', defaults: { fomat: 'json'}
       get 'get_category_grandchildren', defaults: { fomat: 'json'}
       post 'purchase'
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
       patch 'reserve_cancel'
     end
     
-  end
+  
     ##collection do
     ##  get 'ready'
     ##end
