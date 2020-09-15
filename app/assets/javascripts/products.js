@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', ()=> {
-  console.log("ok")
   // 画像用のinputを生成する関数
   const buildFileField = (index)=> {
     const html = `<div data-index="${index}" class="js-file_group">
@@ -15,7 +14,6 @@ $(document).on('turbolinks:load', ()=> {
   let fileIndex = [1,2,3,4,5,6,7,8];
 
   $('#image-box').on('change', '.js-file', function(e) {
-    console.log("aaa")
     // fileIndexの先頭の数字を使ってinputを作る
     $('.dropbox').append(buildFileField(fileIndex[0]));
     fileIndex.shift();
