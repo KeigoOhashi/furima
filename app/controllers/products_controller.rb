@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   def index
     @parents = Category.where(ancestry:nil)
     @products = Product.includes(:images).order('created_at DESC')
+    
   end
 
   def new
@@ -39,7 +40,8 @@ class ProductsController < ApplicationController
   end
 
   def get_category_grandchildren
-    @category_grandchildren = Category.find(id: "#{params[:child_id]}").children
+    # @category_grandchildren = Category.find(id: "#{params[:child_id]}").children
+    @category_grandchildren = Category.find(params[:child_id]).children
   end
 
   

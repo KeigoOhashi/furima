@@ -35,7 +35,7 @@ Rails.application.routes.draw do
       patch 'reserved'
       patch 'reserve_cancel'
     end
-    
+end   
   
     ##collection do
     ##  get 'ready'
@@ -44,4 +44,5 @@ Rails.application.routes.draw do
     ##namespace :products do
     ##resources :searches, only: [:index,:show]
     ##
+
 end

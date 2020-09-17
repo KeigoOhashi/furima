@@ -16,21 +16,21 @@
               %p クリックしてファイルをアップロード
               = f.fields_for :images do |image|
                 = image.file_field :product_image, class: 'js-file'
-        .itemName   
-          .itemName--top        
-            %h2 商品名
-            .head__icon
-              必須       
-          .itemName__form  
-          %div
-            = f.text_field :name, class:"products-name__text__field", placeholder: "商品名（必須 40文字まで)"
-        .detail   
-          .detail--top         
-            %h2 商品詳細 
-            = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-            .head__icon
-              必須       
-          %form.detail__form 
+        //.itemName   
+        //  .itemName--top        
+        //    %h2 商品名
+        //    .head__icon
+        //      必須       
+        //  .itemName__form  
+        //    %div
+        //    = f.text_field :name, class:"products-name__text__field", placeholder: "商品名（必須 40文字まで)"
+        //.detail   
+        //  .detail--top         
+        //    %h2 商品詳細 
+        //    = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+        //    .head__icon
+        //      必須       
+        //  %form.detail__form 
         .category    
           .category--top
             %h2 カテゴリー
@@ -55,15 +55,14 @@
               %h2 商品詳細 
               .head__icon
                 必須 
-            = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-                    
+            = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"       
             %form.detail__form 
           .category   
             .category--top
               %h2 カテゴリー
               .head__icon
                 必須  
-            = f.collection_select :category_id, @parents, :id, :name,{prompt: "---"}, class: "select-default", id: "parent-form"
+            = f.collection_select :category_id, @parents, :id, :name,{prompt: "---"}, class: "category__child", id: "parent-form"
             .category_child_drop
             .category_grandchild_drop
           .brand  

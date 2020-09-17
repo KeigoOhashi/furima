@@ -1,60 +1,63 @@
-
-
-
 $(function(){
   function appendOption(category){
     var html = `<option value="${category.id}">${category.name}</option>`;
     return html;
   }
+ // 子セレクトボックスのhtml作成
   function appendChildrenBox(insertHTML){
     var childSelectHtml = "";
-    childSelectHtml = `<div class="category__child" id="parent-form">
-                        <select id="parent-form" name="product[category_id]" class="serect_field">
+    childSelectHtml = `<div class="category__child" id="child-form">
+                       <select class="category__child--form" name="product[category_id]"  id="child_category">
                           <option value="">---</option>
                           ${insertHTML}
                         </select>
                       </div>`;
+ // 出現させるクラスの指定
     $('.category_child_drop').append(childSelectHtml);
   }
+   // 孫セレクトボックスのhtml作成
   function appendGrandchildrenBox(insertHTML){
     var grandchildSelectHtml = "";
-    grandchildSelectHtml = `<div class="category__child" id="parent-form">
+    grandchildSelectHtml = `<div class="category__grandchild" id="grandchild-form">
+                            <select class="category__grandchild-form" name="product[category_id]" id="grandchild_category" >
                                 <option value="">---</option>
                                 ${insertHTML}
                                 </select>
                             </div>`;
-    $('.category_grandchild_drop').append(grandchildSelectHtml);
+// 親セレクトボックスの選択肢を変えたらイベント発火
+    $('.category_child_drop').append(grandchildSelectHtml);
   }
   $('#parent-form').on('change',function(){
     var parentId = document.getElementById('parent-form').value;
-      $.ajax({
+     $.ajax({
         url: '/products/get_category_children',
         type: 'GET',
         data: { parent_id: parentId },
         dataType: 'json'
       })
+//DBからjson.jbuilder経由でJSONにデーターを渡す
       .done(function(children){ 
-        $('#children_wrapper').remove();
-        $('#grandchildren_wrapper').remove();  
+        $('#child-form').remove();
+        $('#grandchild-form').remove();  
         var insertHTML = '';
         
         children.forEach(function(child){
+ // forEachでchildに一つずつデータをinsertHTMLに代入｡子のoptionが一つずつ作成される
           insertHTML += appendOption(child); 
         });
         appendChildrenBox(insertHTML);
       })
       .fail(function(){
-        alert('カテゴリー取得に失敗しました');
+        alert();
       })
-      
-      $('#children_wrapper').remove();
-      $('#grandchildren_wrapper').remove();
+// 親の選択肢を変えたら、子と孫を削除｡ 
+        $('#category__child').empty();
+        $('#category__grandchild').empty(); 
     })
-  $('#child__category').on('change',function(){
-    var childId = document.getElementById('child__category').value;
-    if(childId != "" && childId != 21 && childId != 42 && childId != 55 && childId != 61 && childId != 66 && childId != 77 && childId != 80
-                     && childId != 86 && childId != 94 && childId != 113 && childId != 125 && childId != 130 && childId != 151 && childId != 158 && childId != 165
-                     && childId != 174 && childId != 182  && childId != 192  ){
+ // document､もしくは親を指定しないと発火しない 
+    $(document).on('change', "#child_category", function(){
+      var childId = document.getElementById('child_category').value;
+      console.log("child")
       $.ajax({
         url: '/products/get_category_grandchildren',
         type: 'GET',
@@ -63,7 +66,7 @@ $(function(){
       })
       .done(function(grandchildren){
         console.log(grandchildren)
-        $('#grandchildren_wrapper').remove();
+        $('#grandchild-form').remove();
         var insertHTML = '';
         grandchildren.forEach(function(grandchild){
           insertHTML += appendOption(grandchild);
@@ -73,8 +76,6 @@ $(function(){
       .fail(function(){
         alert('カテゴリー取得に失敗しました');
       })
-    }else{
-      $('#grandchildren_wrapper').remove();
-    }
+    
   })
 });

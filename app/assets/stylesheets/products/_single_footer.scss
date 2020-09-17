@@ -1,0 +1,24 @@
+.single-footer__a{
+  width: 456px;
+  height: 150px;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 30px 0 20px;
+  text-align: center;
+  
+  & li{
+    display: inline-block;
+    width: 148px;
+    font-size: 13px;
+  }
+  
+  .header__simbol__bottom{
+    width:100%;
+    margin:25px;
+    left: 30px;
+  }
+  p{
+    margin: 8px 0 ;
+    font-size: 13px;
+  }
+}
