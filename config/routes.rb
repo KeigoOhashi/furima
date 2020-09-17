@@ -15,16 +15,19 @@ Rails.application.routes.draw do
   end
   root 'products#index'
 
-  resources :users, only: [:show, :edit, :update]do
-    member do
-      get 'profile'
-      patch 'profile_update'
-      get 'logout'
-    end
-  end
+ 
   
-  resources :products, only: [:index,:new,:show,:create]do
-    member do
+    resources :users, only: [:show, :edit, :update]do
+      member do
+        get 'profile'
+        patch 'profile_update'
+        get 'logout'
+      end
+    end
+  resources :products ,only: [:index,:new,:show,:create]do
+    collection do
+      get 'get_category_children', defaults: { fomat: 'json'}
+      get 'get_category_grandchildren', defaults: { fomat: 'json'}
       post 'purchase'
       get 'purchased'
       get 'buy'
@@ -32,7 +35,8 @@ Rails.application.routes.draw do
       patch 'reserved'
       patch 'reserve_cancel'
     end
-  end
+end   
+  
     ##collection do
     ##  get 'ready'
     ##end
@@ -40,4 +44,5 @@ Rails.application.routes.draw do
     ##namespace :products do
     ##resources :searches, only: [:index,:show]
     ##
+
 end

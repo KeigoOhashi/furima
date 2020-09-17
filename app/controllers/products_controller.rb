@@ -2,10 +2,11 @@ class ProductsController < ApplicationController
   def index
     @parents = Category.where(ancestry:nil)
     @products = Product.includes(:images).order('created_at DESC')
+    
   end
 
   def new
-
+      @parents= Category.where(ancestry:nil)
 
     # if user_signed_in?   #一旦バリデーション外し中
       @product = Product.new
@@ -23,9 +24,28 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+  end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json 
+    end
+    @product= Product.find(params[:id])
   end
+  
+      
+  def get_category_children
+    @category_children = Category.find_by(id: "#{params[:parent_id]}", ancestry: nil).children
+  end
+
+  def get_category_grandchildren
+    # @category_grandchildren = Category.find(id: "#{params[:child_id]}").children
+    @category_grandchildren = Category.find(params[:child_id]).children
+  end
+
+  
+
 
   def purchase
     @product_buyer= Product.find(params[:id])
@@ -42,6 +62,5 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name,:price,:description,:brand,:status,:postage,:shipping_area,:shipping_days,images_attributes: [:product_image,:_destroy,:id]).merge(user_id: current_user.id)
     end
-    
-  end
+
 end

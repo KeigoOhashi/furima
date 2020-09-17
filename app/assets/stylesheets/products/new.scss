@@ -10,21 +10,20 @@
 }
 @mixin form{
   font-size: 14px;
-  margin:10px;
   margin-bottom: 15px;
   display: flex;
   margin-left:40px;
 }
 @mixin squere_color{
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   border-collapse: collapse;
   border: 1px solid #dedede;
-  background-color: #fff;
+  background-color: grey;
 }
 @mixin two_color{
   border: 1px solid #dedede; 
-  background-color: #fff;
+
 }
 @mixin margin{
   margin: 10px 35px 30px; 
@@ -41,7 +40,6 @@
     .header__simbol{
       width:100%;
       text-align : center;
-      //margin-bottom:20px;
       margin-top: 20px;
     }
 }
@@ -55,13 +53,14 @@
     margin: 0 auto;
   
     &__content{ 
-      width: 700px;
+      width: 500px;
+      height: 880px;
       background-color: #fff;
       margin: 0 auto;      
       padding:25px 20px;
 
       &__brock{
-        width: 700px;
+        width: 500px;
 
         &__top{
           font-size: 14px;
@@ -75,43 +74,50 @@
         }
         
           &__area{
-           background-color: #fff;
+           background-color:grey;
            padding: 15px 45px;
            border: 2px double #dedede;
-           margin:10px 35px 35px 35px;
+           margin:10px 35px ;
            text-align: center;
   
             .photo__space{
+              background-color:grey;
               margin-top:5px;
               display: flex;
               justify-content:space-between;
               
               &__photo--1{
+                background-color:grey;
                @include squere_color;
               }
               &__photo--2{
+                background-color:grey;
                @include squere_color;
               }
               &__photo--3{
+                background-color:grey;
                @include squere_color;
               }
               &__photo--4{
+                background-color:grey;
                @include squere_color; 
               }
             }
           
           }
-        
-    
-        .itemName{
-          margin:0 auto;
-          &--top{
-            @include form;
-            .head__icon{
-              @include icon;
-            }
-          }
-          &__form{
+         .itemName{
+           margin:0 auto;
+           &--top{
+             font-size: 10px;
+             margin:10px;
+             margin-bottom: 15px;
+             display: flex;
+             margin-left:40px;
+             .head__icon{
+               @include icon;
+             }
+           }
+           .itemName__form {
             height: 40px;
             @include margin;  
             @include two_color;
@@ -126,41 +132,41 @@
               @include icon;
             }
           }
-          &__form{
-            height: 100px;
-            @include margin; 
-            @include two_color;
+          .sell--content__text__area{
+            margin-left:40px;
           }
+          
         }
 
         .category{
           margin:0 auto;
           &--top{
-            @include form;
+            font-size: 14px;
+            margin:10px;
+            margin-bottom: 15px;
+            display: flex;
+            margin-left:40px;
             .head__icon{
               @include icon;
             }
           }
-          &__form{
-            height: 80px;
-            @include margin; 
-            @include two_color;
+          .select-default{
+            margin-left:40px;
           }
+          
         }
 
         .brand {
           margin:0 auto;
-          &--top{
+          .brand--top{
             font-size: 14px;
             margin:10px;
             margin-bottom: 15px;
             margin-left:40px;
           }
-          &__form{
-            height: 40px;
-            @include margin;
-            @include two_color;
-          }    
+          .select--wrap__default{
+            margin-left:40px;
+          }
         }
 
         .condition{
@@ -171,12 +177,10 @@
               @include icon;
             }
           }
-          &__form{
-            height: 100px;
-            @include margin;  
-            @include two_color;
-            padding: 5 10px;
-          } 
+          .select--wrap__default{
+            margin-left:40px;
+          }
+
         }
 
         .shipping{
@@ -187,10 +191,8 @@
               @include icon;
             }
           }
-          &__form{
-            height: 40px; 
-            @include margin; 
-            @include two_color;
+          .select--wrap__default{
+            margin-left:40px;
           }
         }
 
@@ -202,10 +204,8 @@
               @include icon;
             }
           }
-          .area__form{
-            height: 40px; 
-            @include margin; 
-            @include two_color;
+          .select--wrap__default{
+            margin-left:40px;
           } 
         }
 
@@ -217,10 +217,9 @@
               @include icon;
             }
           }
-          &__form{
-            height: 40px; 
-            @include margin;
-            @include two_color;
+          .select--wrap__default{
+            margin-left:40px;
+          } 
           }
         }
         
@@ -234,26 +233,25 @@
               @include icon;
             } 
           }
+          
           &__form{
             height: 55px; 
             margin: 10px 30px 45px 300px; 
             @include two_color;
+            .input--price__default{
+              height: 50px;
+            }
           }
         }
       .purchase{
         margin:0 auto;
         
       
-        .purchase__button {
-          margin:0 auto 30px;
-          background-color: red;
-          border-radius: 5px;
-          height: 55px;
-          width:250px;
-          
-          
-          //@include two_color;
-          margin-top:50px;
+          .btn--red{
+            background-color: red;
+            font-size:16px;
+            text-align:center; 
+          }
           .purchase__button__form{
             font-size:20px;
             color:white;
@@ -265,17 +263,17 @@
             margin-left:87px;
           }
         }
-      } 
-      p{
-        font-size:6px;
-        text-align: center;
-        line-height: 16px;
-      } 
-
+     
+         p{
+           font-size:6px;
+           text-align: center;
+           line-height: 16px;
+         } 
+        }
       }
     }
-  }
-}
+  
+
 
   .single-footer__a{
     width: 456px;
@@ -300,10 +298,6 @@
       margin: 8px 0 ;
       font-size: 13px;
     }
-    hr {
-      border-color:#dedede;   
-      width: 700px; 
-      text-align: center; 
-      border-style:thin;  
-    }
+    
   }
+

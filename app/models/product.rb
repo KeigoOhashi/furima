@@ -24,6 +24,12 @@ class Product < ApplicationRecord
 
   accepts_nested_attributes_for :images, allow_destroy: true
   mount_uploader :image, ImageUploader
+end
 
+def get_category_children
+  @category_children = Category.find("#{params[:parent_id]}").children
+end
 
+def get_category_grandchildren
+  @category_grandchildren = Category.find("#{params[:child_id]}").children
 end
