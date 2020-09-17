@@ -10,7 +10,6 @@
 }
 @mixin form{
   font-size: 14px;
-  //margin:10px;
   margin-bottom: 15px;
   display: flex;
   margin-left:40px;
@@ -23,8 +22,8 @@
   background-color: grey;
 }
 @mixin two_color{
-//  //border: 1px solid #dedede; 
-//  //background-color: #fff;
+  border: 1px solid #dedede; 
+
 }
 @mixin margin{
   margin: 10px 35px 30px; 
@@ -41,7 +40,6 @@
     .header__simbol{
       width:100%;
       text-align : center;
-      //margin-bottom:20px;
       margin-top: 20px;
     }
 }

@@ -16,21 +16,6 @@
               %p クリックしてファイルをアップロード
               = f.fields_for :images do |image|
                 = image.file_field :product_image, class: 'js-file'
-        //.itemName   
-        //  .itemName--top        
-        //    %h2 商品名
-        //    .head__icon
-        //      必須       
-        //  .itemName__form  
-        //    %div
-        //    = f.text_field :name, class:"products-name__text__field", placeholder: "商品名（必須 40文字まで)"
-        //.detail   
-        //  .detail--top         
-        //    %h2 商品詳細 
-        //    = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-        //    .head__icon
-        //      必須       
-        //  %form.detail__form 
         .category    
           .category--top
             %h2 カテゴリー
@@ -131,21 +116,7 @@
           %small 
             © FURIMA, Inc. 
                           
-  //=render "purchase";
-  //=render "footer"; 
+  
 
 
-  //%form.category__form{id: "category__box--parent"}
-  -# = f.collection_select :category_id, Category.all.limit(13), :id, :name,{prompt:"---"},{class:"select--wrap-cat1__default-category1", id: "parent_form"}
-  //= f.collection_select :root_category_id, @category, :id, :name,{prompt: "---"}, {class: "contents__main__detail__right__select__form", id: "category_select", required: true}
-  //= icon('fas', 'angle-down', class: "contents__main__detail__right__select--icon")
-  //=f.collection_select :category_id, @category_parent_array, :id, :name,{ include_blank: "選択してください"},class:"select_field"
-  //.select--wrap{id: "category__box--parent"}
-  //  .select-wrap
-  //    =f.select :L_category_id, Product.L_category_ids.keys.to_a, { prompt: '----'}, {class: "select--wrap__default"}
-  //    = fa_icon 'angle-down', class: 'fa-angle-down'
-  //  .select-wrap
-  //    =f.select :M_category_id, Product.M_category_ids.keys.to_a, { prompt: '----'}, {class: "select--wrap__default"}
-  //    = fa_icon 'angle-down', class: 'fa-angle-down'
-  //  .select-wrap
-  //    =f.select :S_category_id, Product.S_category_ids.keys.to_a, { prompt: '----'}, {class: "select--wrap__default"}
+  
