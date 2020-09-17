@@ -30,8 +30,8 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html
       format.json 
-       @children = Category.find(params[:parent_id]).children
     end
+    @product= Product.find(params[:id])
   end
   
       
