@@ -57,7 +57,6 @@ $(function(){
  // document､もしくは親を指定しないと発火しない 
     $(document).on('change', "#child_category", function(){
       var childId = document.getElementById('child_category').value;
-      console.log("child")
       $.ajax({
         url: '/products/get_category_grandchildren',
         type: 'GET',
@@ -65,7 +64,6 @@ $(function(){
         dataType: 'json'
       })
       .done(function(grandchildren){
-        console.log(grandchildren)
         $('#grandchild-form').remove();
         var insertHTML = '';
         grandchildren.forEach(function(grandchild){
