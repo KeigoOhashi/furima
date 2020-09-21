@@ -36,13 +36,4 @@ Rails.application.routes.draw do
       patch 'reserve_cancel'
     end
 end   
-  
-    ##collection do
-    ##  get 'ready'
-    ##end
-    ##end
-    ##namespace :products do
-    ##resources :searches, only: [:index,:show]
-    ##
-
 end

@@ -31,8 +31,12 @@ class ProductsController < ApplicationController
       format.html
       format.json 
     end
-    @product= Product.find(params[:id])
+    @product = Product.find(params[:id])
+    @category_name = @product.category.root.name    
+    @bigcategory_name = @product.category.parent .name
+    @smallcategory_name = @product.category.name
   end
+
   
       
   def get_category_children
@@ -62,5 +66,12 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name,:price,:description,:brand,:status,:postage,:shipping_area,:shipping_days,images_attributes: [:product_image,:_destroy,:id]).merge(user_id: current_user.id)
     end
+
+    # カテゴリー
+  def set_category
+    @smallcategory = Category.where(@product.categories_id)
+    @category = Category.where(Category.find(@product.categories_id).sub_sub) unless Category.find(@product.category_id).sub_sub == '0'
+    @bigcategory = Category.where(Category.find(@product.categories_id).sub)
+  end
 
 end

@@ -10,9 +10,8 @@
 }
 @mixin form{
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
   display: flex;
-  margin-left:40px;
 }
 @mixin squere_color{
   width: 60px;
@@ -26,13 +25,13 @@
 
 }
 @mixin margin{
-  margin: 10px 35px 30px; 
+  margin: 10px 35px 20px; 
 }
 
 
 
 .header{
-  background: #f8f8f8;
+  background: #dedede;
   width:100%;
   height: 80px;
   box-sizing: border-box;
@@ -45,132 +44,127 @@
 }
 
 .main {
-  background: #f8f8f8;
-  padding: 20px 0;
+  margin:20px auto;
 
   .new__main{
-    padding: 5 45px;
+    padding: 15 45px;
     margin: 0 auto;
+    
   
     &__content{ 
       width: 500px;
-      height: 880px;
+      height: 1150px;
       background-color: #fff;
       margin: 0 auto;      
-      padding:25px 20px;
+      padding:25px 45px;
 
       &__brock{
         width: 500px;
+        
 
-        &__top{
-          font-size: 14px;
-          text-align: left;
-          margin-top:25px;
-          display: flex;
-          margin-left:40px;
-          .head__icon{
-            @include icon;
+        &__area{
+          width:470px;
+          height:140px;
+          background-color:grey;
+          //padding: 15px 45px;
+          border: 2px double #dedede;
+          margin:10px auto ;
+          text-align: center;
+          position:relative;
+          
+           .js-file{
+            position:abusolute;
+             display:none;
+             width:470px;
+             height:140px;
+           }
+               p{
+                 text-align:center;
+                 margin-top:60px;
+                 font-size:16px;
+              }
+            
+           
           }
         }
-        
-          &__area{
-           background-color:grey;
-           padding: 15px 45px;
-           border: 2px double #dedede;
-           margin:10px 35px ;
-           text-align: center;
-  
-            .photo__space{
-              background-color:grey;
-              margin-top:5px;
-              display: flex;
-              justify-content:space-between;
-              
-              &__photo--1{
-                background-color:grey;
-               @include squere_color;
-              }
-              &__photo--2{
-                background-color:grey;
-               @include squere_color;
-              }
-              &__photo--3{
-                background-color:grey;
-               @include squere_color;
-              }
-              &__photo--4{
-                background-color:grey;
-               @include squere_color; 
-              }
-            }
-          
-          }
+      }
+    }
          .itemName{
-           margin:0 auto;
+          text-align: left;
+          margin:25px 0 0 0;
            &--top{
-             font-size: 10px;
-             margin:10px;
-             margin-bottom: 15px;
-             display: flex;
-             margin-left:40px;
+            @include form;
              .head__icon{
                @include icon;
              }
            }
-           .itemName__form {
-            height: 40px;
-            @include margin;  
-            @include two_color;
+           .products-name__text__field {
+            width:300px; 
+            height: 30px; 
+            @include margin;
+            
           }
         } 
         
         .detail{
-          margin:0 auto;
+          text-align: left;
+          margin-bottom:10px;
           &--top{
+            left:20px;
             @include form;
             .head__icon{
               @include icon;
             }
           }
           .sell--content__text__area{
-            margin-left:40px;
+            
+            @include margin;
           }
           
         }
 
         .category{
-          margin:0 auto;
+          text-align: left;
+          margin-bottom:10px;
           &--top{
-            font-size: 14px;
-            margin:10px;
-            margin-bottom: 15px;
-            display: flex;
-            margin-left:40px;
+            @include form;
             .head__icon{
               @include icon;
             }
           }
-          .select-default{
-            margin-left:40px;
+          .category__child{
+            width:300px; 
+            height: 30px; 
+            margin: 0px 35px 0px; 
           }
-          
+        }
+        .category__child--form{
+          width:300px; 
+          height: 30px; 
+          margin:5px 0px 5px;
+        }
+        .category__grandchild-form{
+          width:300px; 
+          height: 30px; 
+          margin:10px 35px 0;
         }
 
         .brand {
-          margin:0 auto;
+          text-align: left;
+          margin-bottom:10px;
           .brand--top{
-            font-size: 14px;
-            margin:10px;
-            margin-bottom: 15px;
-            margin-left:40px;
+            @include form;
           }
           .select--wrap__default{
-            margin-left:40px;
-          }
+            width:300px; 
+            height: 30px; 
+            @include margin;
+           }
+          
         }
-
         .condition{
-          margin:0 auto;
+          text-align: left;
+          margin-bottom:10px;
           &--top{
             @include form;
             .head__icon{
@@ -178,13 +172,16 @@
             }
           }
           .select--wrap__default{
-            margin-left:40px;
+            width:300px; 
+            height: 30px; 
+            @include margin;
           }
 
         }
 
         .shipping{
-          margin:0 auto;
+          text-align: left;
+          margin-bottom:10px;
           &--top{
             @include form;
             .head__icon{
@@ -192,12 +189,15 @@
             }
           }
           .select--wrap__default{
-            margin-left:40px;
+            width:300px; 
+            height: 30px; 
+            @include margin;
           }
         }
 
         .area{
-          margin:0 auto;
+          text-align: left;
+          margin-bottom:10px;
           .area--top{
             @include form;
             .head__icon{
@@ -205,12 +205,14 @@
             }
           }
           .select--wrap__default{
-            margin-left:40px;
-          } 
+            width:300px; 
+            height: 30px; 
+            @include margin;
         }
-
+      }
         .arrivalDay{
-          margin:0 auto;
+          text-align: left;
+          margin-bottom:10px;
           &--top{
             @include form;
             .head__icon{
@@ -218,13 +220,16 @@
             }
           }
           .select--wrap__default{
-            margin-left:40px;
+            width:300px; 
+            height: 30px; 
+            @include margin;
           } 
           }
-        }
         
+      
         .price{
           margin:0 auto;
+          margin-bottom:10px;
           &--top{
             font-size: 14px;
             margin:10px 0 14px 300px;
@@ -234,47 +239,42 @@
             } 
           }
           
-          &__form{
+          .price__form {
             height: 55px; 
             margin: 10px 30px 45px 300px; 
-            @include two_color;
             .input--price__default{
               height: 50px;
             }
           }
         }
+        .two_color{
+          border: 1px solid #dedede; 
+        }
       .purchase{
         margin:0 auto;
         
-      
           .btn--red{
-            background-color: red;
-            font-size:16px;
-            text-align:center; 
-          }
-          .purchase__button__form{
+            background-color:  #3ccace;
             font-size:20px;
             color:white;
             font-weight:bold;
             text-align:center; 
-            //top:10px;
+            width:300px;
+            height:45px;
             display: inline-block;
-            margin-top:19px;
-            margin-left:87px;
+            margin:0 auto;
+            margin-left:90px;
+            border:1px;
           }
         }
      
          p{
+           margin-top:15px;
            font-size:6px;
            text-align: center;
            line-height: 16px;
          } 
         }
-      }
-    }
-  
-
-
   .single-footer__a{
     width: 456px;
     height: 150px;

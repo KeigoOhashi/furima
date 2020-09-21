@@ -29,6 +29,7 @@ $(function(){
   }
   $('#parent-form').on('change',function(){
     var parentId = document.getElementById('parent-form').value;
+    
      $.ajax({
         url: '/products/get_category_children',
         type: 'GET',
