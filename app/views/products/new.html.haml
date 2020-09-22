@@ -3,14 +3,16 @@
     =image_tag "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg", width:'150',height:'75'
 .main
   .new__main
+    #file-upload-button
     .new__main__content
       .new__main__content__brock
       = form_for @product do |f|
         .new__main__content__brock__area
           %label.dropbox__img
-          = f.fields_for :images do |image|
-            = image.file_field :product_image, class: 'js-file' 
             %p クリックしてファイルをアップロード
+            = f.fields_for :images do |image|
+              = image.file_field :product_image, class: 'js-file' 
+            
         .itemName   
           .itemName--top        
             %h2 商品名
@@ -36,7 +38,9 @@
           .category_grandchild_drop
         .brand  
           .brand--top       
-            %h2 ブランド  
+            %h2 ブランド 
+            .head__icon
+              任意   
           .brand__form 
             = f.select :brand,Product.brands.keys,{prompt:"---"}, {class:"select--wrap__default"}
         .condition   
@@ -72,12 +76,13 @@
             %h2 価格
             .head__icon
               必須 
-          .price__form  
-            =f.text_field :price,class:"input--price__default",placeholder: "例）300"
+          .price__yen
+            .price__form 
+              円 
+              =f.text_field :price,class:"input--price__default",placeholder: " 例）300"
         .purchase
           .purchase__button__form
             =f.submit "出品する",class:"btn--red"
-          //=link_to "もどる",products_path,class:"btn--gray"
           %p
             禁止されている行為および出品物を必ずご確認ください。
             %br

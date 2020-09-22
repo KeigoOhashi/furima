@@ -25,7 +25,7 @@
 
 }
 @mixin margin{
-  margin: 10px 35px 20px; 
+  margin: 10px 35px 15px 80px; 
 }
 
 
@@ -49,11 +49,15 @@
   .new__main{
     padding: 15 45px;
     margin: 0 auto;
+
+    #file-upload-button{
+      display:none;
+    }
     
   
     &__content{ 
       width: 500px;
-      height: 1150px;
+      min-height:100%;
       background-color: #fff;
       margin: 0 auto;      
       padding:25px 45px;
@@ -66,28 +70,35 @@
           width:470px;
           height:140px;
           background-color:grey;
-          //padding: 15px 45px;
           border: 2px double #dedede;
           margin:10px auto ;
           text-align: center;
           position:relative;
           
-           .js-file{
-            position:abusolute;
-             display:none;
-             width:470px;
-             height:140px;
-           }
-               p{
-                 text-align:center;
-                 margin-top:60px;
-                 font-size:16px;
-              }
-            
+          .dropbox__img{
+            position:relative;
+            width:470px;
+            height:140px;
+
+            p{
+              margin-top:63px;
+              color:white;
+              text-align:center;
+              font-size:17px;
+            }
+               .js-file{
+                 display:none;
+                 top:100px;
+                 width: 450px;
+                 height: 60px;
+               }
+              
+           
            
           }
+          }
         }
-      }
+      
     }
          .itemName{
           text-align: left;
@@ -99,8 +110,9 @@
              }
            }
            .products-name__text__field {
-            width:300px; 
+            width:350px; 
             height: 30px; 
+            margin:0 auto;
             @include margin;
             
           }
@@ -117,7 +129,8 @@
             }
           }
           .sell--content__text__area{
-            
+            width:350px; 
+            margin:0 auto;
             @include margin;
           }
           
@@ -132,31 +145,41 @@
               @include icon;
             }
           }
+        }
           .category__child{
-            width:300px; 
+            width:350px;  
             height: 30px; 
-            margin: 0px 35px 0px; 
+            margin: 5px 35px 0px 80px; 
           }
-        }
-        .category__child--form{
-          width:300px; 
-          height: 30px; 
-          margin:5px 0px 5px;
-        }
-        .category__grandchild-form{
-          width:300px; 
-          height: 30px; 
-          margin:10px 35px 0;
-        }
-
+        
+          .category__child--form{
+            width:350px; 
+            height: 30px; 
+            margin:5px 0px 5px 0px;
+          }
+          .category__grandchild-form{
+            width:350px; 
+            height: 30px; 
+            margin:15px 35px 5px 80px;
+          }
+        
         .brand {
           text-align: left;
           margin-bottom:10px;
           .brand--top{
             @include form;
+            .head__icon{
+              background: #CCCCCC;
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: #fff;
+              font-size: 12px;
+              display: inline-block;;
+            }
           }
           .select--wrap__default{
-            width:300px; 
+            width:350px; 
             height: 30px; 
             @include margin;
            }
@@ -172,7 +195,7 @@
             }
           }
           .select--wrap__default{
-            width:300px; 
+            width:350px; 
             height: 30px; 
             @include margin;
           }
@@ -189,7 +212,7 @@
             }
           }
           .select--wrap__default{
-            width:300px; 
+            width:350px; 
             height: 30px; 
             @include margin;
           }
@@ -205,7 +228,7 @@
             }
           }
           .select--wrap__default{
-            width:300px; 
+            width:350px; 
             height: 30px; 
             @include margin;
         }
@@ -220,8 +243,9 @@
             }
           }
           .select--wrap__default{
-            width:300px; 
-            height: 30px; 
+            width:350px; 
+            height: 30px;
+            margin:0 auto;
             @include margin;
           } 
           }
@@ -232,18 +256,24 @@
           margin-bottom:10px;
           &--top{
             font-size: 14px;
-            margin:10px 0 14px 300px;
+            margin:10px 0 14px 230px;
             display: flex;
             .head__icon{
               @include icon;
             } 
           }
-          
+          .price__yen{
+            display: flex;
+            font-size: 14px;
+            font-weight:bold;
+            margin:15px 5px 0px 220px;
+            text-align: center;
           .price__form {
-            height: 55px; 
-            margin: 10px 30px 45px 300px; 
+            font-size:16px;
+            margin: 0px 25px 25px 0px; 
             .input--price__default{
               height: 50px;
+            }   
             }
           }
         }
@@ -274,7 +304,7 @@
            text-align: center;
            line-height: 16px;
          } 
-        }
+ } }
   .single-footer__a{
     width: 456px;
     height: 150px;
