@@ -7,10 +7,10 @@ class ProductsController < ApplicationController
 
   def new
       @parents= Category.where(ancestry:nil)
-
     # if user_signed_in?   #一旦バリデーション外し中
       @product = Product.new
       @product.images.new
+      # @product.images.new
     # else
       # redirect_to root_path
     # end

@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', ()=> {
   }
     // プレビュー用のimgタグを生成する関数
     const buildImg = (index, url)=> {
-      const html = `<img data-index="${index}" src="${url}" width="100px" height="100px">`;
+      const html = `<img data-index="${index}" src="${url}" width="100px" height="70px">`;
       return html;
     }
 
@@ -21,6 +21,7 @@ $(document).on('turbolinks:load', ()=> {
   
 
   $('#image-box').on('change', '.js-file', function(e) {
+    
     const targetIndex = $(this).parent().data('index');
     // ファイルのブラウザ上でのURLを取得する
     const file = e.target.files[0];

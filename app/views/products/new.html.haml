@@ -3,101 +3,103 @@
     =image_tag "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg", width:'150',height:'75'
 .main
   .new__main
-    #file-upload-button
-    .new__main__content
-      .new__main__content__brock
-      = form_for @product do |f|
-        .new__main__content__brock__area
-          %label.dropbox__img
-            %p クリックしてファイルをアップロード
-            = f.fields_for :images do |image|
-              = image.file_field :product_image, class: 'js-file' 
-            
-        .itemName   
-          .itemName--top        
-            %h2 商品名
-            .head__icon
-              必須       
-          %form.itemName__form
-          = f.text_field :name, class:"products-name__text__field", placeholder: "商品名（必須 40文字まで)"
-        .detail  
-          .detail--top         
-            %h2 商品詳細 
-            .head__icon
-              必須 
-          %form.detail__form
-            = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"         
-        .category   
-          .category--top
-            %h2 カテゴリー
-            .head__icon
-              必須  
-          %form.category__form
-            = f.collection_select :category_id, @parents, :id, :name,{prompt: "---"}, class: "category__child", id: "parent-form"
-          .category_child_drop
-          .category_grandchild_drop
-        .brand  
-          .brand--top       
-            %h2 ブランド 
-            .head__icon
-              任意   
-          .brand__form 
-            = f.select :brand,Product.brands.keys,{prompt:"---"}, {class:"select--wrap__default"}
-        .condition   
-          .condition--top 
-            %h2 コンディション
-            .head__icon
-              必須  
-          %form.condition__form 
-            = f.select :status,Product.statuses.keys,{prompt:"---"}, {class:"select--wrap__default"}
-        .shipping
-          .shipping--top     
-            %h2 発送料の負担 
-            .head__icon
-              必須  
-          .shipping__form
-            = f.select :postage,Product.postages.keys,{prompt:"---"}, {class:"select--wrap__default"}
-        .area  
-          .area--top      
-            %h2 発送元地域
-            .head__icon
-              必須
-          .area__form
-            = f.select :shipping_area, Product.prefectures.keys,{prompt:"---"},{class:"select--wrap__default "}
-        .arrivalDay    
-          .arrivalDay--top
-            %h2発送日の目安
-            .head__icon
-              必須
-          .arrivalDay__form
-            = f.select :shipping_days,Product.shipping_dates.keys,{prompt:"---"}, {class:"select--wrap__default"}
-        .price
-          .price--top
-            %h2 価格
-            .head__icon
-              必須 
-          .price__yen
-            .price__form 
-              円 
-              =f.text_field :price,class:"input--price__default",placeholder: " 例）300"
-        .purchase
-          .purchase__button__form
-            =f.submit "出品する",class:"btn--red"
-          %p
-            禁止されている行為および出品物を必ずご確認ください。
-            %br
-            偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。
-            %br
-            また、出品をもちまして加盟店規約に同意したことになります。
+    #image-box
+      %ul#previews
+        .new__main__content
+          .new__main__content__brock
+          = form_for @product do |f|
+            .new__main__content__brock__area
+              %li.input
+              %label.dropbox__img
+                %p クリックしてファイルをアップロード
+                %br 最大4枚まで掲載出来ます
+                = f.fields_for :images do |f_image|
+                  = f_image.file_field :product_image, class: 'js-file'        
+            .itemName   
+              .itemName--top        
+                %h2 商品名
+                .head__icon
+                  必須       
+              %form.itemName__form
+              = f.text_field :name, class:"products-name__text__field", placeholder: "商品名（必須 40文字まで)"
+            .detail  
+              .detail--top         
+                %h2 商品詳細 
+                .head__icon
+                  必須 
+              %form.detail__form
+                = f.text_area :description,class:"sell--content__text__area",placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"         
+            .category   
+              .category--top
+                %h2 カテゴリー
+                .head__icon
+                  必須  
+              %form.category__form
+                = f.collection_select :category_id, @parents, :id, :name,{prompt: "---"}, class: "category__child", id: "parent-form"
+              .category_child_drop
+              .category_grandchild_drop
+            .brand  
+              .brand--top       
+                %h2 ブランド 
+                .head__icon
+                  任意   
+              .brand__form 
+                = f.select :brand,Product.brands.keys,{prompt:"---"}, {class:"select--wrap__default"}
+            .condition   
+              .condition--top 
+                %h2 コンディション
+                .head__icon
+                  必須  
+              %form.condition__form 
+                = f.select :status,Product.statuses.keys,{prompt:"---"}, {class:"select--wrap__default"}
+            .shipping
+              .shipping--top     
+                %h2 発送料の負担 
+                .head__icon
+                  必須  
+              .shipping__form
+                = f.select :postage,Product.postages.keys,{prompt:"---"}, {class:"select--wrap__default"}
+            .area  
+              .area--top      
+                %h2 発送元地域
+                .head__icon
+                  必須
+              .area__form
+                = f.select :shipping_area, Product.prefectures.keys,{prompt:"---"},{class:"select--wrap__default "}
+            .arrivalDay    
+              .arrivalDay--top
+                %h2発送日の目安
+                .head__icon
+                  必須
+              .arrivalDay__form
+                = f.select :shipping_days,Product.shipping_dates.keys,{prompt:"---"}, {class:"select--wrap__default"}
+            .price
+              .price--top
+                %h2 価格
+                .head__icon
+                  必須 
+              .price__yen
+                .price__form 
+                  円 
+                  =f.text_field :price,class:"input--price__default",placeholder: " 例）300"
+            .purchase
+              .purchase__button__form
+                =f.submit "出品する",class:"btn--red"
+              %p
+                禁止されている行為および出品物を必ずご確認ください。
+                %br
+                偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。
+                %br
+                また、出品をもちまして加盟店規約に同意したことになります。
   %footer.single-footer__a
     %nav
       %ul.clearfix
         %li
-          = link_to "プライバシーポリシー", "#"
+          = link_to "プライバシーポリシー", (root_path)
         %li
-          = link_to "フリマ 利用規約", "#"
+          = link_to "フリマ 利用規約", (root_path)
         %li
-          = link_to "特定商取引に関する表記", "#"
+          = link_to "特定商取引に関する表記", (root_path)
         .header__simbol__bottom
       =image_tag "http://furima.tokyo/assets/logo-d3d78326971d78b06e3d6f0ba666d025a8ad681286b4d9e00e7dbe8673bcfd23.svg", width:'100',height:'40'
     %p

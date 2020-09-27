@@ -50,10 +50,6 @@
     padding: 15 45px;
     margin: 0 auto;
 
-    #file-upload-button{
-      display:none;
-    }
-    
   
     &__content{ 
       width: 500px;
@@ -71,7 +67,7 @@
           height:140px;
           background-color:grey;
           border: 2px double #dedede;
-          margin:10px auto ;
+          margin:25px auto ;
           text-align: center;
           position:relative;
           
@@ -86,19 +82,18 @@
               text-align:center;
               font-size:17px;
             }
-               .js-file{
-                 display:none;
-                 top:100px;
-                 width: 450px;
-                 height: 60px;
-               }
-              
-           
-           
-          }
+            &{
+              color:white;
+            }
+              //  .js-file{
+                //  display:none;
+                //  top:100px;
+                //  width: 450px;
+                //  height: 60px;
+              //  }
           }
         }
-      
+      }
     }
          .itemName{
           text-align: left;
@@ -297,14 +292,14 @@
             border:1px;
           }
         }
-     
          p{
            margin-top:15px;
            font-size:6px;
            text-align: center;
            line-height: 16px;
          } 
- } }
+ } 
+}
   .single-footer__a{
     width: 456px;
     height: 150px;
