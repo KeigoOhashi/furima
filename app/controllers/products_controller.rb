@@ -37,6 +37,10 @@ class ProductsController < ApplicationController
     @smallcategory_name = @product.category.name
   end
 
+  def destroy
+    @product.destroy
+    redirect_to root_path
+  end
   
       
   def get_category_children
@@ -73,5 +77,4 @@ class ProductsController < ApplicationController
     @category = Category.where(Category.find(@product.categories_id).sub_sub) unless Category.find(@product.category_id).sub_sub == '0'
     @bigcategory = Category.where(Category.find(@product.categories_id).sub)
   end
-
 end
